@@ -41,7 +41,7 @@ public class LoginAction extends BaseAction {
 			if (user != null) {
 				if (user.getUserPsd().equals(userPwd)) {
 					try {
-						//设置session
+						//设置session.
 						ActionContext.getContext().getSession().put("userNameSession", user.getUserName());
 						ActionContext.getContext().getSession().put("userIdSession", user.getUserId());
 						ActionContext.getContext().getSession().put("userSession", user);
