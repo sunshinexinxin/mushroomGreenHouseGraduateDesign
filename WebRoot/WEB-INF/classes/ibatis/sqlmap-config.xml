@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>    
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"    
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<package name="com.hbkd.hyx.app.login.bean" />
+		<package name="com.hbkd.hyx.app.sence.bean" />
+	</typeAliases>
+
+	<!-- 配置sql语句文件,此处引入所有 *.ibatis.xml -->
+	<mappers>
+		<!-- 登录sql配置项 -->
+		<mapper resource="com/hbkd/hyx/app/login/dao/impl/UserSqlMap.ibatis.xml" />
+		<mapper	resource="com/hbkd/hyx/app/sence/dao/impl/UserInfoSqlMap.ibatis.xml" />
+		<mapper	resource="com/hbkd/hyx/app/sence/dao/impl/CreditListSqlMap.ibatis.xml" />
+		<mapper	resource="com/hbkd/hyx/app/sence/dao/impl/CreditManageSqlMap.ibatis.xml" />
+	</mappers>
+</configuration>
