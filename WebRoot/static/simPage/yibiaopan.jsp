@@ -7,10 +7,10 @@
 %>
 <html>
 <head>
-<script type="text/javascript" src="/graduate-trunk/static/simPage/yibiaopanJs/jquery-2.0.0.min.js"></script>
-<script type="text/javascript" src="/graduate-trunk/static/simPage/yibiaopanJs/jquery-ui"></script>
-<link href="/graduate-trunk/static/simPage/yibiaopanJs/bootstrap-combined.min.css" rel="stylesheet" media="screen">
-<script type="text/javascript" src="/graduate-trunk/static/simPage/yibiaopanJs/bootstrap.min.js"></script>
+<script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/simPage/yibiaopanJs/jquery-2.0.0.min.js"></script>
+<script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/simPage/yibiaopanJs/jquery-ui"></script>
+<link href="/mushroomGreenHouseGraduateDesign/static/simPage/yibiaopanJs/bootstrap-combined.min.css" rel="stylesheet" media="screen">
+<script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/simPage/yibiaopanJs/bootstrap.min.js"></script>
 </head>
 <body >
 <div class="container-fluid">
@@ -22,7 +22,7 @@
 						<h1 class="page-header"> 信贷经理 </h1>
 						<div class="row placeholders">
 							<div class="col-xs-6 col-sm-3 placeholder">
-								<a href="#"><img alt="统计报表" class="img-responsive" src="/graduate-trunk/static/image/app-recommend.png" 
+								<a href="#"><img alt="统计报表" class="img-responsive" src="/mushroomGreenHouseGraduateDesign/static/image/app-recommend.png" 
 									style="width: 150px; height: 150px;" /></a>
 								<h4>
 									<b>可视化交互分析</b>
@@ -31,21 +31,21 @@
 									  </span>
 							</div>
 							<div class="col-xs-6 col-sm-3 placeholder">
-								<a href="/graduate-trunk/user/creditList.action?page=1"><img alt="200x200" class="img-responsive" src="/graduate-trunk/static/image/app-health.png" 
+								<a href="/mushroomGreenHouseGraduateDesign/user/creditList.action?page=1"><img alt="200x200" class="img-responsive" src="/mushroomGreenHouseGraduateDesign/static/image/app-health.png" 
 									style="width: 150px; height: 150px;" /></a>
 								<h4>
 									人员管理
 								</h4> <span class="text-muted">预留</span>
 							</div>
 							<div class="col-xs-6 col-sm-3 placeholder">
-								<a href="#"><img alt="200x200" class="img-responsive" src="/graduate-trunk/static/image/app-device.png" 
+								<a href="#"><img alt="200x200" class="img-responsive" src="/mushroomGreenHouseGraduateDesign/static/image/app-device.png" 
 									style="width: 150px; height: 150px;" /></a>
 								<h4>
 									消息发布
 								</h4> <span class="text-muted">预留</span>
 							</div>
 							<div class="col-xs-6 col-sm-3 placeholder">
-								<a href="#"><img alt="200x200" class="img-responsive" src="/graduate-trunk/static/image/githubIcon.png" 
+								<a href="#"><img alt="200x200" class="img-responsive" src="/mushroomGreenHouseGraduateDesign/static/image/githubIcon.png" 
 									style="width: 150px; height: 150px;" /></a>
 								<h4>
 									菜单预留

@@ -35,7 +35,7 @@ public class ConnDB {
 			System.out.println(map);
 
 		System.out.println("------------------");
-		System.out.println(selectOne("select * from tb_mrgh_users ", null));
+		System.out.println(selectOne("select * from tb_mrgh_users ", ""));
 
 		// System.out.println(insert("insert into tb_ml_security_resources(resources_id,system_id) values(?,?)","9911","aatest"));
 	}

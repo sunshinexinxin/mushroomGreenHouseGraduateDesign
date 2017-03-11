@@ -16,18 +16,18 @@ public class LoginAction extends BaseAction {
 	private static final long serialVersionUID = -22247146217995282L;
 	// 注入UserService
 	private UserService userService;
-	// 注入属性
-	private User user;
-	private String userName;
-	private String userPwd;
-	private List<User> userList;
-
 	/**
 	 * 以上注入的service、属性 必须要有getter、setter方法 setter 方法用于接受页面传入参数 getter方法用于返回页面,展示
 	 * 
 	 * Struts2 中 定义的属性 必须要有getter、setter方法 Spring 配置文件中
 	 * 定义的bean也必须要有getter、setter方法
 	 */
+	// 注入属性
+	private User user;
+	private String userName;
+	private String userPwd;
+	private List<User> userList;
+
 
 	/**
 	 * 登录方法
@@ -37,7 +37,7 @@ public class LoginAction extends BaseAction {
 			logger.info("前台数据：用户名：" + userName + "\t密码：" + userPwd);
 			user = userService.getUserById(userName);
 			logger.info("后台数据：" + user);
-			logger.getClass();
+//			logger.getClass();
 			if (user != null) {
 				if (user.getUserPsd().equals(userPwd)) {
 					try {
@@ -61,9 +61,6 @@ public class LoginAction extends BaseAction {
 		return ERROR;
 	}
 
-	// public String login() {
-	// return "mainManager";
-	// }
 
 	public String userInfo() {
 		return SUCCESS;
