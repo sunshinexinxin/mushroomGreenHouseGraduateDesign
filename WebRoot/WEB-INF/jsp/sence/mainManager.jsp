@@ -48,7 +48,7 @@
 				<div class="top-menu">
 					<ul class="top-menu-nav">
 						<li>
-							<a target="Conframe" href="/mushroomGreenHouseGraduateDesign/static/simPage/yibiaopan.jsp" id="123" name="123">首页</a>
+							<a target="Conframe" href="/mushroomGreenHouseGraduateDesign/static/simPage/mushRoomMap.jsp" id="123" name="123">首页</a>
 						</li>
 						<li>
 							<a href="#">预留菜单<i class="tip-up"></i>
