@@ -12,7 +12,7 @@
 	<constant name="struts.custom.i18n.resources" value="globalMessages" />
 	<constant name="struts.action.extension" value="action,," />
 
-	<package name="login" extends="struts-default" namespace="/user">
+	<package name="login" extends="struts-default" namespace="">
 		<!-- 用户登录 -->
 		<action name="show" class="loginAction" method="login">
 			<result name="error">/WEB-INF/jsp/login/login.html</result>

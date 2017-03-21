@@ -1,13 +1,13 @@
 package com.hbkd.hyx.app.login.action;
 
-import java.util.List;
-
-import org.apache.log4j.Logger;
-
 import com.hbkd.hyx.app.login.bean.User;
 import com.hbkd.hyx.app.login.service.UserService;
 import com.hbkd.hyx.core.mvc.BaseAction;
 import com.opensymphony.xwork2.ActionContext;
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
 
 public class LoginAction extends BaseAction {
 
@@ -15,6 +15,7 @@ public class LoginAction extends BaseAction {
 
 	private static final long serialVersionUID = -22247146217995282L;
 	// 注入UserService
+	@Autowired
 	private UserService userService;
 	/**
 	 * 以上注入的service、属性 必须要有getter、setter方法 setter 方法用于接受页面传入参数 getter方法用于返回页面,展示

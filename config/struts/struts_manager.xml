@@ -12,7 +12,7 @@
 	<constant name="struts.custom.i18n.resources" value="globalMessages" />
 	<constant name="struts.action.extension" value="action,," />
 
- 	<package name="creditManage" extends="struts-default" namespace="/user">
+ 	<package name="creditManage" extends="struts-default" namespace="">
 		<!-- 进入 添加信贷员 页面 -->
 		<action name="form-collapse" class="creditManageAction" method="addCredit">
 			<result name="success">/WEB-INF/jsp/sence/form-collapse.jsp</result>
