@@ -34,6 +34,7 @@ public class LoginAction extends BaseAction {
 	 */
 	public String login() {
 		try {
+			System.out.println("欢迎anke!!!");
 			logger.info("前台数据：用户名：" + userName + "\t密码：" + userPwd);
 			user = userService.getUserById(userName);
 			logger.info("后台数据：" + user);
