@@ -1,13 +1,12 @@
 package com.hbkd.hyx.app.login.action;
 
-import java.util.List;
-
-import org.apache.log4j.Logger;
-
 import com.hbkd.hyx.app.login.bean.User;
 import com.hbkd.hyx.app.login.service.UserService;
 import com.hbkd.hyx.core.mvc.BaseAction;
 import com.opensymphony.xwork2.ActionContext;
+import org.apache.log4j.Logger;
+
+import java.util.List;
 
 public class LoginAction extends BaseAction {
 
@@ -34,6 +33,7 @@ public class LoginAction extends BaseAction {
 	 */
 	public String login() {
 		try {
+
 			logger.info("前台数据：用户名：" + userName + "\t密码：" + userPwd);
 			user = userService.getUserById(userName);
 			logger.info("后台数据：" + user);

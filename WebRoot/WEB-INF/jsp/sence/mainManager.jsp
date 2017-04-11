@@ -51,7 +51,7 @@
 							<a target="Conframe" href="/mushroomGreenHouseGraduateDesign/static/simPage/mushRoomMap.jsp" id="123" name="123">首页</a>
 						</li>
 						<li>
-							<a href="#">预留菜单<i class="tip-up"></i>
+							<a href="#">信息发布<i class="tip-up"></i>
 							</a>
 							<ul class="kidc">
 								<li>
@@ -77,7 +77,7 @@
 							</ul>
 						</li>
 						<li>
-							<a href="#">预留菜单<i class="tip-up"></i>
+							<a href="#">监控中心<i class="tip-up"></i>
 							</a>
 							<ul class="kidc">
 								<li>
@@ -95,7 +95,7 @@
 							</ul>
 						</li>
 						<li>
-							<a href="#">预留菜单<i class="tip-up"></i>
+							<a href="#">系统管理<i class="tip-up"></i>
 							</a>
 							<ul class="kidc">
 								<li>
@@ -125,7 +125,7 @@
 							</ul>
 						</li>
 						<li>
-							<a href="#">预留菜单<i class="tip-up"></i>
+							<a href="#">关于<i class="tip-up"></i>
 							</a>
 							<ul class="kidc">
 								<li>
@@ -192,7 +192,7 @@
 				</h1>
 				<div class="acc">
 					<div>
-						<a class="one">统计报表</a>
+						<a class="one">数据报表统计</a>
 						<ul class="kid">
 							<li>
 								<b class="tip"></b><a target="Conframe"
@@ -205,32 +205,36 @@
 						</ul>
 					</div>  
 					<div>
-						<a class="one" target="Conframe" href="/mushroomGreenHouseGraduateDesign/user/creditList.action?page=1">信贷员管理</a>
+						<a class="one" target="Conframe" href="/mushroomGreenHouseGraduateDesign/user/creditList.action?page=1">实时数据查询</a>
 						<ul class="kid">
 							<li>
 								<b class="tip"></b><a target="Conframe"
-									href="/mushroomGreenHouseGraduateDesign/user/form-collapse.action">添加信贷员</a>
+									href="/mushroomGreenHouseGraduateDesign/user/form-collapse.action">空气温度</a>
 							</li>
 							<li>
 								<b class="tip"></b><a target="Conframe"
-									href="/mushroomGreenHouseGraduateDesign/static/main/Template/form-guide.html">删除信贷员</a>
+									href="/mushroomGreenHouseGraduateDesign/static/main/Template/form-guide.html">土壤湿度</a>
 							</li>
 							<li>
 								<b class="tip"></b><a target="Conframe"
-									href="/mushroomGreenHouseGraduateDesign/static/main/Template/Maintain-del.html">修改信贷员</a>
+									href="/mushroomGreenHouseGraduateDesign/static/main/Template/Maintain-del.html">光照强度</a>
+							</li>
+							<li>
+								<b class="tip"></b><a target="Conframe"
+									href="/mushroomGreenHouseGraduateDesign/static/main/Template/Maintain-del.html">二氧化碳含量</a>
 							</li>
 						</ul>
 					</div>
 					<div>
-						<a class="one">发布通知</a>
+						<a class="one">预警规则管理</a>
 						<ul class="kid">
 							<li>
 								<b class="tip"></b><a target="Conframe"
-									href="/mushroomGreenHouseGraduateDesign/static/main/Template/Alert.html">预留菜单</a>
+									href="/mushroomGreenHouseGraduateDesign/static/main/Template/Alert.html">预警规则制定</a>
 							</li>
 							<li>
 								<b class="tip"></b><a target="Conframe"
-									href="/mushroomGreenHouseGraduateDesign/static/main/Template/Alert.html">预留菜单</a>
+									href="/mushroomGreenHouseGraduateDesign/static/main/Template/Alert.html">责任人指定</a>
 							</li>
 							<li>
 								<b class="tip"></b><a target="Conframe"
@@ -251,11 +255,15 @@
 						</ul>
 					</div>
 					<div>
-						<a class="one">预留菜单</a>
+						<a class="one">远程设备管理</a>
 						<ul class="kid">
 							<li>
 								<b class="tip"></b><a target="Conframe"
-									href="/mushroomGreenHouseGraduateDesign/static/main/Template/order.html">预留菜单</a>
+									href="/mushroomGreenHouseGraduateDesign/static/main/Template/order.html">修改设备编号</a>
+							</li>
+							<li>
+								<b class="tip"></b><a target="Conframe"
+									href="/mushroomGreenHouseGraduateDesign/static/main/Template/formstyle.html">修改设备名称</a>
 							</li>
 							<li>
 								<b class="tip"></b><a target="Conframe"
@@ -264,6 +272,23 @@
 							<li>
 								<b class="tip"></b><a target="Conframe"
 									href="/mushroomGreenHouseGraduateDesign/static/main/Template/formstyle.html">预留菜单</a>
+							</li>
+						</ul>
+					</div>
+						<div>
+						<a class="one">系统后台管理</a>
+						<ul class="kid">
+							<li>
+								<b class="tip"></b><a target="Conframe"
+									href="/mushroomGreenHouseGraduateDesign/static/main/Template/order.html">查看管理员信息</a>
+							</li>
+							<li>
+								<b class="tip"></b><a target="Conframe"
+									href="/mushroomGreenHouseGraduateDesign/static/main/Template/formstyle.html">修改个人信息</a>
+							</li>
+							<li>
+								<b class="tip"></b><a target="Conframe"
+									href="/mushroomGreenHouseGraduateDesign/static/main/Template/formstyle.html">删除个人信息</a>
 							</li>
 							<li>
 								<b class="tip"></b><a target="Conframe"
