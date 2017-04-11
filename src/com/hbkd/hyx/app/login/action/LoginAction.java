@@ -27,7 +27,6 @@ public class LoginAction extends BaseAction {
 	private String userPwd;
 	private List<User> userList;
 
-
 	/**
 	 * 登录方法
 	 */
