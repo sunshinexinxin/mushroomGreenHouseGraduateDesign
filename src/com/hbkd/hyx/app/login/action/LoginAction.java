@@ -5,7 +5,6 @@ import com.hbkd.hyx.app.login.service.UserService;
 import com.hbkd.hyx.core.mvc.BaseAction;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -28,7 +27,6 @@ public class LoginAction extends BaseAction {
 	private String userName;
 	private String userPwd;
 	private List<User> userList;
-
 
 	/**
 	 * 登录方法
