@@ -31,7 +31,6 @@ public class UserInfoAction extends BaseAction {
             userBean = userInfoService.getUserInfoById(userId);
             ActionContext.getContext().getSession().put("userSession", userBean);
 
-
             userInfoList = userInfoService.getUserInfoList(userId);
             for (User userInfo : userInfoList) {
                 logger.info(userInfo.toString());

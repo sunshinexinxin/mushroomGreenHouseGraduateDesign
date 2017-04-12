@@ -91,7 +91,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
       </div>
 		<div class="detail-section">
 			<h3>
-				家庭成员信息
+				人员信息
 			</h3>
 			<div>
 				<table class="table table-bordered table-hover">
@@ -109,7 +109,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 					<tbody>
 						<s:iterator value="userInfoList" status="userInfo">
 							<tr class="success">
-								<td><s:property value="id" /></td>
+								<td><s:property value="userId" /></td>
 								<td><s:property value="relationShip" /></td>
 								<td><s:property value="name" /></td>
 								<td><s:property value="birthday" /></td>
