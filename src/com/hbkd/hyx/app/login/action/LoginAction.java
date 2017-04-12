@@ -43,9 +43,9 @@ public class LoginAction extends BaseAction {
 				if (user.getUserPsd().equals(userPwd)) {
 					try {
 						//设置session.
-						ActionContext.getContext().getSession().put("userNameSession", user.getUserName());
-						ActionContext.getContext().getSession().put("userIdSession", user.getUserId());
-						ActionContext.getContext().getSession().put("userSession", user);
+						ActionContext.getContext().getSession().put("userName", user.getUserName());
+						ActionContext.getContext().getSession().put("userId", user.getUserId());
+						ActionContext.getContext().getSession().put("userBeen", user);
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
@@ -63,9 +63,9 @@ public class LoginAction extends BaseAction {
 	}
 
 
-	public String userInfo() {
-		return SUCCESS;
-	}
+//	public String userInfo() {
+//		return SUCCESS;
+//	}
 
 	/**
 	 * 退出方法

@@ -1,36 +1,36 @@
-<?xml version="1.0" encoding="UTF-8" ?>  
-  
-<!DOCTYPE struts PUBLIC  
-    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"  
-    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-	<constant name="struts.objectFactory" value="spring" />
-	<constant name="struts.i18n.encoding" value="UTF-8" />
-	<constant name="struts.i18n.reload" value="false" />
-	<constant name="struts.configuration.xml.reload" value="false" />
-	<constant name="struts.custom.i18n.resources" value="globalMessages" />
-	<constant name="struts.action.extension" value="action,," />
+    <constant name="struts.objectFactory" value="spring"/>
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <constant name="struts.i18n.reload" value="false"/>
+    <constant name="struts.configuration.xml.reload" value="false"/>
+    <constant name="struts.custom.i18n.resources" value="globalMessages"/>
+    <constant name="struts.action.extension" value="action,,"/>
 
-	<package name="login" extends="struts-default" namespace="">
-		<!-- 用户登录 -->
-		<action name="show" class="loginAction" method="login">
-			<result name="error">/WEB-INF/jsp/login/login.html</result>
-			<result name="staff">/WEB-INF/jsp/sence/mainStaff.jsp</result>
-			<result name="manage">/WEB-INF/jsp/sence/mainManager.jsp</result>
-			
-		</action>
-		<!-- 个人中心 -->
-		<action name="userInfo" class="userInfoAction" method="userInfo">
-			<result name="success">/WEB-INF/jsp/sence/userInfo.jsp</result>
-		</action>
-		<!-- 用户退出 -->
-		<action name="logout" class="loginAction" method="logout">
-			<result name="success">/WEB-INF/jsp/login/login.html</result>
-		</action>
-	</package>
-	
-	<include file="struts/struts_sence.xml"/> 
-	<include file="struts/struts_manager.xml"/> 
+    <package name="login" extends="struts-default" namespace="">
+        <!-- 用户登录 -->
+        <action name="show" class="loginAction" method="login">
+            <result name="error">/WEB-INF/jsp/login/login.html</result>
+            <result name="staff">/WEB-INF/jsp/sence/mainStaff.jsp</result>
+            <result name="manage">/WEB-INF/jsp/sence/mainManager.jsp</result>
+        </action>
+        <!-- 个人中心 -->
+        <action name="userInfo" class="userInfoAction" method="userInfo">
+            <result name="success">/WEB-INF/jsp/sence/userInfo.jsp</result>
+            <result name="error">/WEB-INF/jsp/sence/err404/404.htm</result>
+        </action>
+        <!-- 用户退出 -->
+        <action name="logout" class="loginAction" method="logout">
+            <result name="success">/WEB-INF/jsp/login/login.html</result>
+        </action>
+    </package>
+
+    <include file="struts/struts_sence.xml"/>
+    <include file="struts/struts_manager.xml"/>
 
 </struts>

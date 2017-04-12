@@ -1,15 +1,13 @@
 package com.hbkd.hyx.app.sence.service;
 
-import java.util.List;
+import com.hbkd.hyx.app.login.bean.User;
 
-import com.hbkd.hyx.app.sence.bean.UserInfo;
+import java.util.List;
 
 
 public interface UserInfoService {
 
-	public UserInfo getUserInfoById(String id);
+	User getUserInfoById(String id);
 
-	public List<UserInfo> getUserInfoList(String string);
-
-	public List<UserInfo> getUserOccList(String string);
+	List<User> getUserInfoList(String string);
 }
