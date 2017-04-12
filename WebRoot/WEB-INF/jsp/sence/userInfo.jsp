@@ -24,7 +24,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
    </style>
  </head>
  <body>
-      
+
   <div class="table table-bordered table-hover">
     <div class="detail-page">
       <h2>用户信息</h2>
