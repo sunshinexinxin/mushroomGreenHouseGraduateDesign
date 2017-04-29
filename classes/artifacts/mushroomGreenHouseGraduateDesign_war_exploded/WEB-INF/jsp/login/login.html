@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>蘑菇大棚监控平台</title>
+		<link rel="shortcut icon" href="/mushroomGreenHouseGraduateDesign/static/image/favicon.ico" />
+		<link href="/mushroomGreenHouseGraduateDesign/static/login/css/style.css" rel="stylesheet"
+			type="text/css" media="all" />
+		<!-- Custom Theme files -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords"
+			content="Ensaluto Form Responsive,Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<!--Google Fonts-->
+		<link
+			href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+			rel='stylesheet' type='text/css'>
+		<!--Google Fonts-->
+		<script src="/mushroomGreenHouseGraduateDesign/static/login/js/jquery.min.js">
+</script>
+	</head>
+	<body>
+		<!--sign up form start here-->
+		<div class="app">
+			<div class="top-bar">
+				<div class="navg">
+					<span class="menu"> <img
+							src="/mushroomGreenHouseGraduateDesign/static/login/images/menu.png" alt="" /> </span>
+					<ul class="res">
+						<li>
+							<a class="active scroll" href="#coffee">Menu</a>
+						</li>
+						<li>
+							<a class="scroll" href="#about">Tools</a>
+						</li>
+						<li>
+							<a class="scroll" href="#about">Settings</a>
+						</li>
+						<li>
+							<a class="scroll" href="#contact">Login</a>
+						</li>
+					</ul>
+					<script>
+	$("span.menu").click(function() {
+		$("ul.res").slideToggle("slow", function() {
+			// Animation complete.
+			});
+	});
+</script>
+				</div>
+				<h2>
+					Welcome
+				</h2>
+			</div>
+			<br><br><br>
+			<form action="/mushroomGreenHouseGraduateDesign/user/show.action" method="post">
+				<input type="text" name="userName" value="" placeholder="用户ID" />
+				<input type="password" name="userPwd" value="" placeholder="密&nbsp&nbsp码"/>
+				<input type="submit" value="Login" />
+			</form>
+			<p>
+				Copyright @ 2016 Graduation design
+				<br>
+				All Rights Reserved 韩奕昕
+			</p>
+		</div>
+		<!--sign up form end here-->
+	</body>
+</html>

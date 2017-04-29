@@ -6,7 +6,7 @@
 
 <struts>
 
-	<package name="creditList" extends="struts-default" namespace="/user">
+	<package name="creditList" extends="struts-default" namespace="">
 		<!-- 管理员入口-本行信贷员 -->
 		<action name="creditList" class="creditListAction" method="creditList">
 			<result name="success">/WEB-INF/jsp/sence/creditList.jsp</result>
