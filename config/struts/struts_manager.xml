@@ -22,7 +22,7 @@
 		<action name="addCreditMessage" class="creditManageAction" method="addCreditMessage">
 			<result name="success">/WEB-INF/jsp/sence/creditList.jsp</result>
 		</action>
-		
-	</package> 
+
+	</package>
 
 </struts>
