@@ -65,7 +65,20 @@
                     <label>地址：</label><span class="detail-text">${userBean.getUserAdd()}</span>
                 </div>
                 <div class="span8">
-                    <label>岗位：</label><span class="detail-text">${userBean.getStatus()}</span>
+                    <label>岗位：</label>
+                    <span class="detail-text" id="detail-text">
+                        <script type="text/javascript" >
+                            if(${userBean.getStatus()}==0){
+                                document.getElementById("detail-text").innerHTML="开发测试岗";
+                            }else if(${userBean.getStatus()}==1)
+                            {
+                                document.getElementById("detail-text").innerHTML = "管理员";
+                            }else if(${userBean.getStatus()}==2)
+                            {
+                                document.getElementById("detail-text").innerHTML = "普通用户";
+                            }
+                        </script>
+                    </span>
                 </div>
             </div>
             <div class="row detail-row">
