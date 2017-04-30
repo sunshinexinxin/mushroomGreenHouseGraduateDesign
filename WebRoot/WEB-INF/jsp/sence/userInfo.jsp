@@ -43,29 +43,29 @@
 
 <div class="table table-bordered table-hover">
     <div class="detail-page">
-        <h2>用户信息</h2>
+        <%--<h2>用户信息</h2>--%>
         <div class="detail-section">
             <h3>基本信息</h3>
             <div class="row detail-row ">
                 <div class="span8">
-                    <label>编号：</label><span class="detail-text">${userBean.getIdno()}</span>
-                </div>
-                <div class="span8">
-                    <label>ID：</label><span class="detail-text">${userBean.getUserId()}</span>
+                    <label>编号：</label><span class="detail-text">${userBean.getUserId()}</span>
                 </div>
                 <div class="span8">
                     <label>姓名：</label><span class="detail-text">${userBean.getUserName()}</span>
                 </div>
-            </div>
-            <div class="row detail-row">
                 <div class="span8">
                     <label>年龄：</label><span class="detail-text">${userBean.getUserAge()}</span>
                 </div>
+            </div>
+            <div class="row detail-row">
                 <div class="span8">
                     <label>手机号：</label><span class="detail-text">${userBean.getUserPhone()}</span>
                 </div>
                 <div class="span8">
                     <label>地址：</label><span class="detail-text">${userBean.getUserAdd()}</span>
+                </div>
+                <div class="span8">
+                    <label>岗位：</label><span class="detail-text">${userBean.getStatus()}</span>
                 </div>
             </div>
             <div class="row detail-row">
@@ -95,8 +95,9 @@
                         <th>大棚经度</th>
                         <th>大棚纬度</th>
                         <th>大棚状态</th>
-                        <th>备注</th>
+                        <%--<th>备注</th>--%>
                         <th>创建时间</th>
+                        <th>操作</th>
                     </tr>
                     </thead>
 
@@ -112,8 +113,9 @@
                             <td><s:property value="mushroomLong"/></td>
                             <td><s:property value="mushroomLat"/></td>
                             <td><s:property value="delFlag"/></td>
-                            <td><s:property value="memo"/></td>
+                            <%--<td><s:property value="memo"/></td>--%>
                             <td><s:property value="ctime"/></td>
+                            <td> <a href="#" value=""/>查看</td>
                         </tr>
                     </s:iterator>
                     </tbody>

@@ -43,7 +43,7 @@ public class LoginAction extends BaseAction {
                         //设置session.
                         ActionContext.getContext().getSession().put("userName", user.getUserName());
                         ActionContext.getContext().getSession().put("userId", user.getUserId());
-                        ActionContext.getContext().getSession().put("userBeen", user);
+                        ActionContext.getContext().getSession().put("userBean", user);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
