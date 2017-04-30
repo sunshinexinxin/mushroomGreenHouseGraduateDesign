@@ -1,6 +1,7 @@
 package com.hbkd.hyx.app.sence.dao.impl;
 
 import com.hbkd.hyx.app.login.bean.User;
+import com.hbkd.hyx.app.sence.bean.Monitor;
 import com.hbkd.hyx.app.sence.dao.UserInfoDao;
 import org.apache.log4j.Logger;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
@@ -11,7 +12,7 @@ public class UserInfoDaoImpl extends SqlSessionDaoSupport implements UserInfoDao
 
     private Logger logger = Logger.getLogger(UserInfoDaoImpl.class);
     User userInfo = null;
-    List<User> userInfoList = null;
+    List<Monitor> userInfoList = null;
 
     public User getUserInfoById(String id) {
         logger.info("SQL_ID:UserMapper.getUserByUserId");
@@ -20,9 +21,9 @@ public class UserInfoDaoImpl extends SqlSessionDaoSupport implements UserInfoDao
         return userInfo;
     }
 
-    public List<User> getUserInfoList(String id) {
-        logger.info("SQL_ID:UserMapper.getUserByUserId 获取用户家庭成员信息");
-        userInfoList = getSqlSession().selectList("UserMapper.getUserByUserId", id);
+    public List<Monitor> getUserInfoList(String userId) {
+        logger.info("SQL_ID:UserMapper.getUserByUserId [个人中心]获取个人信息");
+        userInfoList = getSqlSession().selectList("UserInfoMapper.getUserInfoListByUserID", userId);
         return userInfoList;
     }
 

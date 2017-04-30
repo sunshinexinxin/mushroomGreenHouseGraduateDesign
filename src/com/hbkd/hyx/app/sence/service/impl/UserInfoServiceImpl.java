@@ -1,6 +1,7 @@
 package com.hbkd.hyx.app.sence.service.impl;
 
 import com.hbkd.hyx.app.login.bean.User;
+import com.hbkd.hyx.app.sence.bean.Monitor;
 import com.hbkd.hyx.app.sence.dao.UserInfoDao;
 import com.hbkd.hyx.app.sence.service.UserInfoService;
 
@@ -16,7 +17,7 @@ public class UserInfoServiceImpl implements UserInfoService {
         return userInfoDao.getUserInfoById(id);
     }
 
-    public List<User> getUserInfoList(String id) {
+    public List<Monitor> getUserInfoList(String id) {
         return userInfoDao.getUserInfoList(id);
     }
 

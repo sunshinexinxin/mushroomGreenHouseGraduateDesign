@@ -1,18 +1,34 @@
 package com.hbkd.hyx.app.login.bean;
 
+import com.hbkd.hyx.app.sence.bean.Monitor;
+
 public class User {
 
+    //编号
     private String idno;
+    //用户id
     private String userId;
+    //用户姓名
     private String userName;
+    //用户年龄
     private String userAge;
+    //用户密码
     private String userPsd;
+    //用户联系方式
     private String userPhone;
+    //用户地址
     private String userAdd;
+    //用户身份标识.0:开发测试;1:管理员;2:普通用户
     private String status;
+    //删除标识.初始为0;删除为1.
     private String delFlag;
+    //备注
     private String memo;
+    //创建时间
     private String ctime;
+
+    //大棚监控点
+    private Monitor monitor;
 
     public String getIdno() {
         return idno;
@@ -102,14 +118,29 @@ public class User {
         this.ctime = ctime;
     }
 
-    @Override
-    public String toString() {
-        return "User [idno=" + idno + ", userId=" + userId + ", userName="
-                + userName + ", userAge=" + userAge + ", userPsd=" + userPsd
-                + ", userPhone=" + userPhone + ", userAdd=" + userAdd
-                + ", status=" + status + ", delFlag=" + delFlag + ", memo="
-                + memo + ", ctime=" + ctime + "]";
+    public Monitor getMonitor() {
+        return monitor;
     }
 
+    public void setMonitor(Monitor monitor) {
+        this.monitor = monitor;
+    }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "idno='" + idno + '\'' +
+                ", userId='" + userId + '\'' +
+                ", userName='" + userName + '\'' +
+                ", userAge='" + userAge + '\'' +
+                ", userPsd='" + userPsd + '\'' +
+                ", userPhone='" + userPhone + '\'' +
+                ", userAdd='" + userAdd + '\'' +
+                ", status='" + status + '\'' +
+                ", delFlag='" + delFlag + '\'' +
+                ", memo='" + memo + '\'' +
+                ", ctime='" + ctime + '\'' +
+                ", monitor=" + monitor +
+                '}';
+    }
 }
