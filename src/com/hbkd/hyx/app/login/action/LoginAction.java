@@ -68,6 +68,14 @@ public class LoginAction extends BaseAction {
         return SUCCESS;
     }
 
+    /***地图首页方法
+     *
+     * @return
+     */
+    public String mushRoomMap(){
+        return SUCCESS;
+    }
+
     public UserService getUserService() {
         return userService;
     }

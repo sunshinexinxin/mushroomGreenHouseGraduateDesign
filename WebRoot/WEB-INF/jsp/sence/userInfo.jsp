@@ -31,7 +31,7 @@
         <div class="col-md-12 column">
             <ul class="breadcrumb">
                 <li>
-                    <a href="/mushroomGreenHouseGraduateDesign/static/simPage/mushRoomMap.jsp">首页</a>
+                    <a href="/mushroomGreenHouseGraduateDesign/user/mushRoomMap.action">首页</a>
                 </li>
                 <li class="active">
                     > 个人中心
