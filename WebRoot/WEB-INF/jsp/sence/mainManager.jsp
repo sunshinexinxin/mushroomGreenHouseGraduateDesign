@@ -1,4 +1,4 @@
-﻿<%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+﻿﻿<%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%-- Struts2标签引入 --%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <%
@@ -179,7 +179,7 @@
 					</ul>
 				</div>
 				<div class="top-nav">
-					欢迎您，${userNameSession}！&nbsp;&nbsp;
+					欢迎您，${userName}！&nbsp;&nbsp;
 					<a href="/mushroomGreenHouseGraduateDesign/user/userInfo.action"  target="Conframe">个人中心</a> |
 					<a href="/mushroomGreenHouseGraduateDesign/user/logout.action">安全退出</a>
 				</div>
