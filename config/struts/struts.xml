@@ -28,6 +28,12 @@
         <action name="logout" class="loginAction" method="logout">
             <result name="success">/WEB-INF/jsp/login/login.html</result>
         </action>
+
+        <!-- 首页,展示地图 -->
+        <action name="mushRoomMap" class="loginAction" method="mushRoomMap">
+            <result name="success">/WEB-INF/jsp/sence/mushRoomMap.jsp</result>
+        </action>
+
     </package>
 
     <include file="struts/struts_sence.xml"/>

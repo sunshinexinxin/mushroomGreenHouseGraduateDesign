@@ -43,7 +43,7 @@ public class LoginAction extends BaseAction {
                         //设置session.
                         ActionContext.getContext().getSession().put("userName", user.getUserName());
                         ActionContext.getContext().getSession().put("userId", user.getUserId());
-                        ActionContext.getContext().getSession().put("userBeen", user);
+                        ActionContext.getContext().getSession().put("userBean", user);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -65,6 +65,14 @@ public class LoginAction extends BaseAction {
      * 退出方法
      */
     public String logout() {
+        return SUCCESS;
+    }
+
+    /***地图首页方法
+     *
+     * @return
+     */
+    public String mushRoomMap(){
         return SUCCESS;
     }
 
