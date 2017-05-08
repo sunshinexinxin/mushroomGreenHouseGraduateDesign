@@ -15,13 +15,13 @@
                 var i = $(this).find('i');
                 if (i.attr('class') == 'tip-down') { i.attr('class', 'tip-up') } else { i.attr('class', 'tip-down') }
                 $(this).parent().find('tbody').toggle();
-            })
+            });
             //添加
             var _html = '<tr>' + _this.parent().find('.demo').html() + '</tr>';
             $('.add').click(function () {
                 $(this).parents('.list').find('tbody').append(_html);
 
-            })
+            });
             //删除
             $('.del').live('click',function () {
                 var _tr = $(this).parents('tr');

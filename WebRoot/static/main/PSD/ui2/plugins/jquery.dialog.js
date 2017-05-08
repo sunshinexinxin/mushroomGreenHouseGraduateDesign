@@ -16,8 +16,8 @@ _3.attr("style",t.attr("style"));
 t.removeAttr("style").css("overflow","hidden");
 _3.panel({border:false,doSize:false});
 return _3;
-};
-function _4(_5){
+}
+    function _4(_5){
 var _6=$.data(_5,"dialog").options;
 var _7=$.data(_5,"dialog").contentPanel;
 if(_6.toolbar){
@@ -88,12 +88,12 @@ _6.onResize.call(_5,_e,_f);
 }}));
 _6.href=_c;
 _6.content=_d;
-};
-function _11(_12,_13){
+}
+    function _11(_12,_13){
 var _14=$.data(_12,"dialog").contentPanel;
 _14.panel("refresh",_13);
-};
-$.fn.dialog=function(_15,_16){
+}
+    $.fn.dialog=function(_15,_16){
 if(typeof _15=="string"){
 var _17=$.fn.dialog.methods[_15];
 if(_17){

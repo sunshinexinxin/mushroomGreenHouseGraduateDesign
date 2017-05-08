@@ -14,7 +14,7 @@
                 evenRowCss: 'treven', //奇数行的CSS
                 oddRowCss: 'trodd',   //偶数行的CSS`
                 activeCss: 'tractive'  //鼠标访问的CSS
-            }
+            };
             var options = $.extend(defaults, options);
             return this.each(function () {
                 var o = options;
@@ -35,7 +35,7 @@
         tabs: function (options) { 
 		var defaults = {
                 MouseMode: 'mouseover' //鼠标操作绑定类型，当然你可以设为click..更多..
-            }
+            };
             var options = $.extend(defaults, options);
             return this.each(function () {
 				var o = options;
@@ -61,4 +61,4 @@
 })();// JavaScript Document
 $(function(){
 		$('.tb').Chuchur().tableUi();
-	})
+	});

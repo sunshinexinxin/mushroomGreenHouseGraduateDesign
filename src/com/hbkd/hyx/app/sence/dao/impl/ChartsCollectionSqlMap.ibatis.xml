@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ChartsCollection">
+    <!--echarts 温度图表-->
+    <resultMap id="temp_wet_MapList" type="ChartsCollectionBean">
+        <result column="idno" property="idno"/>
+        <result column="mushroom_pointid" property="mushroomPointid"/>
+        <result column="mushroom_airtemp" property="mushroomAirtemp"/>
+        <result column="mushroom_airhumidity" property="mushroomAirhumidity"/>
+        <result column="mushroom_soiltemp" property="mushroomSoiltemp"/>
+        <result column="mushroom_soilmoisture" property="mushroomSoilmoisture"/>
+        <result column="mushroom_ightintensity" property="mushroomIghtintensity"/>
+        <result column="mushroom_co2densuty" property="mushroomCo2densuty"/>
+        <result column="memo" property="memo"/>
+        <result column="ctime" property="ctime"/>
+    </resultMap>
+    <!--echarts 温度图表-->
+    <select id="getTempWetListById" resultMap="temp_wet_MapList">
+		select * from tb_mrgh_data_acquisition where mushroom_pointid = #{pointId,jdbcType=NVARCHAR};
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

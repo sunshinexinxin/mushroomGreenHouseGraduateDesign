@@ -12,8 +12,8 @@ function _1(_2){
 $(_2).addClass("progressbar");
 $(_2).html("<div class=\"progressbar-text\"></div><div class=\"progressbar-value\">&nbsp;</div>");
 return $(_2);
-};
-function _3(_4,_5){
+}
+    function _3(_4,_5){
 var _6=$.data(_4,"progressbar").options;
 var _7=$.data(_4,"progressbar").bar;
 if(_5){
@@ -21,8 +21,8 @@ _6.width=_5;
 }
 _7._outerWidth(_6.width);
 _7.find("div.progressbar-text").width(_7.width());
-};
-$.fn.progressbar=function(_8,_9){
+}
+    $.fn.progressbar=function(_8,_9){
 if(typeof _8=="string"){
 var _a=$.fn.progressbar.methods[_8];
 if(_a){

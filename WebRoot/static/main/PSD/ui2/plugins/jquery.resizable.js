@@ -38,8 +38,8 @@ if(_5.height>=_6.minHeight&&_5.height<=_6.maxHeight){
 _5.top=_5.startTop+e.pageY-_5.startY;
 }
 }
-};
-function _9(e){
+}
+    function _9(e){
 var _a=e.data;
 var _b=_a.target;
 if(!$.boxModel&&$.browser.msie){
@@ -47,20 +47,20 @@ $(_b).css({width:_a.width,height:_a.height,left:_a.left,top:_a.top});
 }else{
 $(_b).css({width:_a.width-_a.deltaWidth,height:_a.height-_a.deltaHeight,left:_a.left,top:_a.top});
 }
-};
-function _c(e){
+}
+    function _c(e){
 _1=true;
 $.data(e.data.target,"resizable").options.onStartResize.call(e.data.target,e);
 return false;
-};
-function _d(e){
+}
+    function _d(e){
 _4(e);
 if($.data(e.data.target,"resizable").options.onResize.call(e.data.target,e)!=false){
 _9(e);
 }
 return false;
-};
-function _e(e){
+}
+    function _e(e){
 _1=false;
 _4(e,true);
 _9(e);
@@ -68,8 +68,8 @@ $.data(e.data.target,"resizable").options.onStopResize.call(e.data.target,e);
 $(document).unbind(".resizable");
 $("body").css("cursor","");
 return false;
-};
-return this.each(function(){
+}
+    return this.each(function(){
 var _f=null;
 var _10=$.data(this,"resizable");
 if(_10){
@@ -106,8 +106,8 @@ return 0;
 }else{
 return val;
 }
-};
-var _13={target:e.data.target,dir:dir,startLeft:_12("left"),startTop:_12("top"),left:_12("left"),top:_12("top"),startX:e.pageX,startY:e.pageY,startWidth:$(e.data.target).outerWidth(),startHeight:$(e.data.target).outerHeight(),width:$(e.data.target).outerWidth(),height:$(e.data.target).outerHeight(),deltaWidth:$(e.data.target).outerWidth()-$(e.data.target).width(),deltaHeight:$(e.data.target).outerHeight()-$(e.data.target).height()};
+}
+    var _13={target:e.data.target,dir:dir,startLeft:_12("left"),startTop:_12("top"),left:_12("left"),top:_12("top"),startX:e.pageX,startY:e.pageY,startWidth:$(e.data.target).outerWidth(),startHeight:$(e.data.target).outerHeight(),width:$(e.data.target).outerWidth(),height:$(e.data.target).outerHeight(),deltaWidth:$(e.data.target).outerWidth()-$(e.data.target).width(),deltaHeight:$(e.data.target).outerHeight()-$(e.data.target).height()};
 $(document).bind("mousedown.resizable",_13,_c);
 $(document).bind("mousemove.resizable",_13,_d);
 $(document).bind("mouseup.resizable",_13,_e);
@@ -142,7 +142,7 @@ return dir;
 }
 }
 return "";
-};
+}
 });
 };
 $.fn.resizable.methods={options:function(jq){

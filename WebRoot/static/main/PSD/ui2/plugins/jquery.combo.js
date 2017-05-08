@@ -27,8 +27,8 @@ _5._outerWidth(_4.width);
 _5.find("input.combo-text").width(_5.width()-_7);
 _6.panel("resize",{width:(_4.panelWidth?_4.panelWidth:_5.outerWidth()),height:_4.panelHeight});
 _5.insertAfter(_2);
-};
-function _8(_9){
+}
+    function _8(_9){
 var _a=$.data(_9,"combo").options;
 var _b=$.data(_9,"combo").combo;
 if(_a.hasDownArrow){
@@ -36,8 +36,8 @@ _b.find(".combo-arrow").show();
 }else{
 _b.find(".combo-arrow").hide();
 }
-};
-function _c(_d){
+}
+    function _c(_d){
 $(_d).addClass("combo-f").hide();
 var _e=$("<span class=\"combo\"></span>").insertAfter(_d);
 var _f=$("<input type=\"text\" class=\"combo-text\">").appendTo(_e);
@@ -54,15 +54,15 @@ $(_d).removeAttr("name").attr("comboName",_11);
 }
 _f.attr("autocomplete","off");
 return {combo:_e,panel:_10};
-};
-function _12(_13){
+}
+    function _12(_13){
 var _14=$.data(_13,"combo").combo.find("input.combo-text");
 _14.validatebox("destroy");
 $.data(_13,"combo").panel.panel("destroy");
 $.data(_13,"combo").combo.remove();
 $(_13).remove();
-};
-function _15(_16){
+}
+    function _15(_16){
 var _17=$.data(_16,"combo");
 var _18=_17.options;
 var _19=$.data(_16,"combo").combo;
@@ -133,8 +133,8 @@ $(this).removeClass("combo-arrow-hover");
 return false;
 });
 }
-};
-function _1e(_1f){
+}
+    function _1e(_1f){
 var _20=$.data(_1f,"combo").options;
 var _21=$.data(_1f,"combo").combo;
 var _22=$.data(_1f,"combo").panel;
@@ -159,8 +159,8 @@ if(_25<0){
 _25=0;
 }
 return _25;
-};
-function _23(){
+}
+    function _23(){
 var top=_21.offset().top+_21.outerHeight();
 if(top+_22.outerHeight()>$(window).height()+$(document).scrollTop()){
 top=_21.offset().top-_22.outerHeight();
@@ -169,15 +169,15 @@ if(top<$(document).scrollTop()){
 top=_21.offset().top+_21.outerHeight();
 }
 return top;
-};
-};
-function _26(_27){
+}
+}
+    function _26(_27){
 var _28=$.data(_27,"combo").options;
 var _29=$.data(_27,"combo").panel;
 _29.panel("close");
 _28.onHidePanel.call(_27);
-};
-function _2a(_2b,_2c){
+}
+    function _2a(_2b,_2c){
 var _2d=$.data(_2b,"combo").options;
 var _2e=$.data(_2b,"combo").combo.find("input.combo-text");
 _2e.validatebox(_2d);
@@ -185,8 +185,8 @@ if(_2c){
 _2e.validatebox("validate");
 _2e.trigger("mouseleave");
 }
-};
-function _2f(_30,_31){
+}
+    function _2f(_30,_31){
 var _32=$.data(_30,"combo").options;
 var _33=$.data(_30,"combo").combo;
 if(_31){
@@ -200,8 +200,8 @@ $(_30).removeAttr("disabled");
 _33.find(".combo-value").removeAttr("disabled");
 _33.find(".combo-text").removeAttr("disabled");
 }
-};
-function _34(_35){
+}
+    function _34(_35){
 var _36=$.data(_35,"combo").options;
 var _37=$.data(_35,"combo").combo;
 if(_36.multiple){
@@ -210,26 +210,26 @@ _37.find("input.combo-value").remove();
 _37.find("input.combo-value").val("");
 }
 _37.find("input.combo-text").val("");
-};
-function _38(_39){
+}
+    function _38(_39){
 var _3a=$.data(_39,"combo").combo;
 return _3a.find("input.combo-text").val();
-};
-function _3b(_3c,_3d){
+}
+    function _3b(_3c,_3d){
 var _3e=$.data(_3c,"combo").combo;
 _3e.find("input.combo-text").val(_3d);
 _2a(_3c,true);
 $.data(_3c,"combo").previousValue=_3d;
-};
-function _3f(_40){
+}
+    function _3f(_40){
 var _41=[];
 var _42=$.data(_40,"combo").combo;
 _42.find("input.combo-value").each(function(){
 _41.push($(this).val());
 });
 return _41;
-};
-function _43(_44,_45){
+}
+    function _43(_44,_45){
 var _46=$.data(_44,"combo").options;
 var _47=_3f(_44);
 var _48=$.data(_44,"combo").combo;
@@ -263,15 +263,15 @@ _46.onChange.call(_44,_45,_47);
 _46.onChange.call(_44,_45[0],_47[0]);
 }
 }
-};
-function _4b(_4c){
+}
+    function _4b(_4c){
 var _4d=_3f(_4c);
 return _4d[0];
-};
-function _4e(_4f,_50){
+}
+    function _4e(_4f,_50){
 _43(_4f,[_50]);
-};
-function _51(_52){
+}
+    function _51(_52){
 var _53=$.data(_52,"combo").options;
 var fn=_53.onChange;
 _53.onChange=function(){
@@ -290,8 +290,8 @@ _43(_52,[]);
 _4e(_52,_53.value);
 }
 _53.onChange=fn;
-};
-$.fn.combo=function(_54,_55){
+}
+    $.fn.combo=function(_54,_55){
 if(typeof _54=="string"){
 return $.fn.combo.methods[_54](this,_55);
 }

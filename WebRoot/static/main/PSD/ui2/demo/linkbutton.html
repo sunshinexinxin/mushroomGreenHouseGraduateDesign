@@ -37,10 +37,10 @@
 		<a href="#" onclick="enable()">enable</a> |
 		<a href="#" onclick="disable()">disable</a> |
 		<a href="#" onclick="changetext()">change add text</a> |
-		<a href="#" onclick="javascript:$('#add').linkbutton({disabled:true})">disable add button</a> |
-		<a href="#" onclick="javascript:$('#add').linkbutton({disabled:false})">enable add button</a> | 
-		<a href="#" onclick="javascript:$('a.easyui-linkbutton').linkbutton({plain:true})">make to plain</a> | 
-		<a href="#" onclick="javascript:$('a.easyui-linkbutton').linkbutton({plain:false})">restore</a>  
+		<a href="#" onclick="$('#add').linkbutton({disabled:true})">disable add button</a> |
+		<a href="#" onclick="$('#add').linkbutton({disabled:false})">enable add button</a> |
+		<a href="#" onclick="$('a.easyui-linkbutton').linkbutton({plain:true})">make to plain</a> |
+		<a href="#" onclick="$('a.easyui-linkbutton').linkbutton({plain:false})">restore</a>
 	</div>
 	<p>3D</p>
 	<div class="toolbar">
@@ -48,7 +48,7 @@
 		<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-remove'">Remove</a>
 		<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">Save</a>
 		<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-cut',disabled:true">Cut</a>
-		<a href="#" class="easyui-linkbutton" onclick="javascript:alert('ttt')">Text Button</a>
+		<a href="#" class="easyui-linkbutton" onclick="alert('ttt')">Text Button</a>
 	</div>
 	<div class="toolbar">
 		<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-ok'">Ok</a>

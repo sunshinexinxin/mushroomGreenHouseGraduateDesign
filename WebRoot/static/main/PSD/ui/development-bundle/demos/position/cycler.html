@@ -29,7 +29,7 @@
 				},
 				collision: "none"
 			}, options));
-		}
+		};
 
 		$.fn.left = function( using ) {
 			return this.position2({
@@ -38,7 +38,7 @@
 				offset: "25 0",
 				using: using
 			});
-		}
+		};
 		$.fn.right = function( using ) {
 			return this.position2({
 				my: "left middle",
@@ -46,7 +46,7 @@
 				offset: "-25 0",
 				using: using
 			});
-		}
+		};
 		$.fn.center = function( using ) {
 			return this.position2({
 				my: "center middle",
@@ -57,7 +57,7 @@
 
 		$( "body" ).css({
 			overflow: "hidden"
-		})
+		});
 		$( ".demo" ).css({
 			position: "relative",
 		});
@@ -75,7 +75,7 @@
 		function next( event ) {
 			event.preventDefault();
 			$( "img:eq(2)" ).center( animate );
-			$( "img:eq(1)" ).left( animate )
+			$( "img:eq(1)" ).left( animate );
 			$( "img:eq(0)" ).right().appendTo( ".demo" );
 		}
 		function previous( event ) {

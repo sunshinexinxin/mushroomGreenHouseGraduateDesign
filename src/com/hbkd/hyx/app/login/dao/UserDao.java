@@ -7,7 +7,7 @@ import com.hbkd.hyx.app.login.bean.User;
 
 public interface UserDao {
 
-	public User getUserById(String id);
+	User getUserById(String id);
 
 //	public List<User> getUserList(String id);
 

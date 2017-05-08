@@ -9117,7 +9117,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            }
 	        }
 
-	        return;
+	        
 	    }
 
 	    /**
@@ -9423,7 +9423,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	         */
 	        module.exports = function() {
 	            if (config.debugMode === 0) {
-	                return;
+	                
 	            }
 	            else if (config.debugMode == 1) {
 	                for (var k in arguments) {
@@ -14233,7 +14233,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            // Better stroking in ShapeBundle
 	            ctx.moveTo(shape.cx + shape.r, shape.cy);
 	            ctx.arc(shape.cx, shape.cy, shape.r, 0, Math.PI * 2, true);
-	            return;
+	            
 	        }
 	    });
 
@@ -14677,7 +14677,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                roundRectHelper.buildPath(ctx, shape);
 	            }
 	            ctx.closePath();
-	            return;
+	            
 	        }
 	    });
 
@@ -19489,7 +19489,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    module.exports = List;
 
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())));
 
 /***/ },
 /* 95 */
@@ -36075,7 +36075,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                shape.y - mathSin(angle) * width
 	            );
 	            ctx.lineTo(x, y);
-	            return;
+	            
 	        }
 	    });
 
@@ -51856,7 +51856,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(335)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(335)));
 
 /***/ },
 /* 335 */
@@ -54531,4 +54531,3 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ }
 /******/ ])
 });
-;

@@ -42,8 +42,8 @@ _9[0].submenu=_a;
 _4(_a);
 }
 });
-};
-function _7(_b){
+}
+    function _7(_b){
 _b.addClass("menu").find(">div").each(function(){
 var _c=$(this);
 if(_c.hasClass("menu-sep")){
@@ -66,9 +66,9 @@ _c._outerHeight(22);
 }
 });
 _b.hide();
-};
-};
-function _10(_11,_12){
+}
+}
+    function _10(_11,_12){
 _12.unbind(".menu");
 _12.bind("mousedown.menu",function(){
 return false;
@@ -122,15 +122,15 @@ _18(_17);
 _12.removeClass("menu-active");
 }
 });
-};
-function _19(_1a){
+}
+    function _19(_1a){
 var _1b=$.data(_1a,"menu").options;
 _18($(_1a));
 $(document).unbind(".menu");
 _1b.onHide.call(_1a);
 return false;
-};
-function _1c(_1d,pos){
+}
+    function _1c(_1d,pos){
 var _1e=$.data(_1d,"menu").options;
 if(pos){
 _1e.left=pos.left;
@@ -150,8 +150,8 @@ return false;
 });
 _1e.onShow.call(_1d);
 });
-};
-function _1f(_20,pos,_21){
+}
+    function _1f(_20,pos,_21){
 if(!_20){
 return;
 }
@@ -168,8 +168,8 @@ if(_21){
 _21();
 }
 });
-};
-function _18(_22){
+}
+    function _18(_22){
 if(!_22){
 return;
 }
@@ -186,9 +186,9 @@ if(m[0].shadow){
 m[0].shadow.hide();
 }
 m.hide();
-};
-};
-function _24(_25,_26){
+}
+}
+    function _24(_25,_26){
 var _27=null;
 var tmp=$("<div></div>");
 function _28(_29){
@@ -203,12 +203,12 @@ _28(this.submenu);
 }
 }
 });
-};
-_28($(_25));
+}
+    _28($(_25));
 tmp.remove();
 return _27;
-};
-function _f(_2b,_2c,_2d){
+}
+    function _f(_2b,_2c,_2d){
 var t=$(_2c);
 if(_2d){
 t.addClass("menu-item-disabled");
@@ -223,8 +223,8 @@ _2c.onclick=_2c.onclick1;
 _2c.onclick1=null;
 }
 }
-};
-function _2e(_2f,_30){
+}
+    function _2e(_2f,_30){
 var _31=$(_2f);
 if(_30.parent){
 _31=_30.parent.submenu;
@@ -257,8 +257,8 @@ _10(_2f,_32);
 if(_30.disabled){
 _f(_2f,_32[0],true);
 }
-};
-function _33(_34,_35){
+}
+    function _33(_34,_35){
 function _36(el){
 if(el.submenu){
 el.submenu.children("div.menu-item").each(function(){
@@ -271,10 +271,10 @@ _37.remove();
 el.submenu.remove();
 }
 $(el).remove();
-};
-_36(_35);
-};
-function _38(_39){
+}
+    _36(_35);
+}
+    function _38(_39){
 $(_39).children("div.menu-item").each(function(){
 _33(_39,this);
 });
@@ -282,8 +282,8 @@ if(_39.shadow){
 _39.shadow.remove();
 }
 $(_39).remove();
-};
-$.fn.menu=function(_3a,_3b){
+}
+    $.fn.menu=function(_3a,_3b){
 if(typeof _3a=="string"){
 return $.fn.menu.methods[_3a](this,_3b);
 }

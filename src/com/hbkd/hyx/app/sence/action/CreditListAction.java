@@ -71,15 +71,15 @@ public class CreditListAction extends BaseAction {
 		for (int i = 0; i < creditList.size(); i++) {
 			HSSFRow rows = sheet.createRow((short) i+1);
 			
-			rows.createCell((short) 0).setCellValue(((CreditList) creditList.get(i)).getId());
-			rows.createCell((short) 1).setCellValue(((CreditList) creditList.get(i)).getUserId());
-			rows.createCell((short) 2).setCellValue(((CreditList) creditList.get(i)).getUserName());
-			rows.createCell((short) 3).setCellValue(((CreditList) creditList.get(i)).getUserGender());
-			rows.createCell((short) 4).setCellValue(((CreditList) creditList.get(i)).getUserBir());
-			rows.createCell((short) 5).setCellValue(((CreditList) creditList.get(i)).getUserAge());
-			rows.createCell((short) 6).setCellValue(((CreditList) creditList.get(i)).getMobilePhone());
-			rows.createCell((short) 7).setCellValue(((CreditList) creditList.get(i)).getEmail());
-			rows.createCell((short) 8).setCellValue(((CreditList) creditList.get(i)).getPosition());
+			rows.createCell((short) 0).setCellValue(creditList.get(i).getId());
+			rows.createCell((short) 1).setCellValue(creditList.get(i).getUserId());
+			rows.createCell((short) 2).setCellValue(creditList.get(i).getUserName());
+			rows.createCell((short) 3).setCellValue(creditList.get(i).getUserGender());
+			rows.createCell((short) 4).setCellValue(creditList.get(i).getUserBir());
+			rows.createCell((short) 5).setCellValue(creditList.get(i).getUserAge());
+			rows.createCell((short) 6).setCellValue(creditList.get(i).getMobilePhone());
+			rows.createCell((short) 7).setCellValue(creditList.get(i).getEmail());
+			rows.createCell((short) 8).setCellValue(creditList.get(i).getPosition());
 		}
 
 		FileOutputStream fileOut = new FileOutputStream("../信贷员列表.xls");

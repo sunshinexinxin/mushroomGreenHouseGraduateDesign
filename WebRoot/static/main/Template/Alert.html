@@ -23,7 +23,7 @@
             });
             $('#info2').click(function () { $('body').alert({ type: 'info', buttons: [{ id: 'yes', name: '确定', callback: function () { alert('确定') } }, { id: 'no', name: '取消', callback: function () { alert('取消') } }] }) });
             $('i').click(function () { $.dialog({ title: '我的浏览器', content: 'url:http://www.baidu.com', lock: true, okVal: '关了', ok: true, width: 788, height: 504, cancelVal: '叉掉', button: [{ id: 'chur', name: '再来个警告', callback: function () { $('body').alert({ type: 'success' }); } }], cancel: true /*为true等价于function(){}*/ }); });
-            $('b').click(function () { $.dialog({ title: '我不能拖动，我15秒后自动关闭', content: 'url:http://www.e-eegoo.com', fixed: true, drag: false, resize: false, time: 35, width: 788, height: 504 }).max(); })
+            $('b').click(function () { $.dialog({ title: '我不能拖动，我15秒后自动关闭', content: 'url:http://www.e-eegoo.com', fixed: true, drag: false, resize: false, time: 35, width: 788, height: 504 }).max(); });
             $('.test').click(function () {
                 if (test) {
                     $.dialog({

@@ -20,7 +20,7 @@
                 modal: true,
                 draggabled: false,
                 even: 'click'
-            }
+            };
             /* 
             defaults = {
                 type: '',       //类型有5种info，success，warning，primary，danger
@@ -46,17 +46,17 @@
             return this.each(function () {
                 var o = options;
                 var _this = $(this);
-                var _modal = '<iframe class="alert-modal"></iframe>'
+                var _modal = '<iframe class="alert-modal"></iframe>';
                 var _html = '<div class="alert alert-' + o.type + '">' +
                              '<a class="close closed" href="#">×</a>' +
                                 '<h4 class="alert-heading">' + o.title + '</h4>' +
                                 '<div class="context">' + o.content + '</div>' +
                                      '<div class="rightbtn">' +
-                                         '<a class="btn closed btn-' + o.type + '" href="#">' + o.btntext + '</a>' + '</div></div>'
+                                         '<a class="btn closed btn-' + o.type + '" href="#">' + o.btntext + '</a>' + '</div></div>';
                 _this.bind(o.even, function () {
                     if ($('.alert-' + o.type).length < 1) {
                         $('body').append(_html);
-                        $('.alert-' + o.type).show('fast')
+                        $('.alert-' + o.type).show('fast');
                         if (o.modal) {
                             $('body').append(_modal);
                         }
@@ -64,10 +64,10 @@
                             $('.alert').draggable({ 'containment': 'body' });
                         }
                     }
-                })
+                });
                 $('.alert-' + o.type).find('.closed').live('click', function () {
                     $(this).parents().find('.alert-' + o.type).hide('fast', function () { $(this).remove(); $('.alert-modal').remove(); })//.remove();
-                })
+                });
             })
         }
     });

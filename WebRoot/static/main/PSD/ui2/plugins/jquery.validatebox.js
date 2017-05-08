@@ -10,8 +10,8 @@
 (function($){
 function _1(_2){
 $(_2).addClass("validatebox-text");
-};
-function _3(_4){
+}
+    function _3(_4){
 var _5=$.data(_4,"validatebox");
 _5.validating=false;
 var _6=_5.tip;
@@ -20,8 +20,8 @@ _6.remove();
 }
 $(_4).unbind();
 $(_4).remove();
-};
-function _7(_8){
+}
+    function _7(_8){
 var _9=$(_8);
 var _a=$.data(_8,"validatebox");
 _a.validating=false;
@@ -47,8 +47,8 @@ _c(_8);
 }).bind("mouseleave.validatebox",function(){
 _b(_8);
 });
-};
-function _c(_d){
+}
+    function _c(_d){
 var _e=$(_d);
 var _f=$.data(_d,"validatebox").message;
 var tip=$.data(_d,"validatebox").tip;
@@ -58,23 +58,23 @@ $.data(_d,"validatebox").tip=tip;
 }
 tip.find(".validatebox-tip-content").html(_f);
 tip.css({display:"block",left:_e.offset().left+_e.outerWidth(),top:_e.offset().top});
-};
-function _b(_10){
+}
+    function _b(_10){
 var tip=$.data(_10,"validatebox").tip;
 if(tip){
 tip.remove();
 $.data(_10,"validatebox").tip=null;
 }
-};
-function _11(_12){
+}
+    function _11(_12){
 var _13=$.data(_12,"validatebox").options;
 var tip=$.data(_12,"validatebox").tip;
 var box=$(_12);
 var _14=box.val();
 function _15(msg){
 $.data(_12,"validatebox").message=msg;
-};
-var _16=box.attr("disabled");
+}
+    var _16=box.attr("disabled");
 if(_16==true||_16=="true"){
 return true;
 }
@@ -108,8 +108,8 @@ return false;
 box.removeClass("validatebox-invalid");
 _b(_12);
 return true;
-};
-$.fn.validatebox=function(_1b,_1c){
+}
+    $.fn.validatebox=function(_1b,_1c){
 if(typeof _1b=="string"){
 return $.fn.validatebox.methods[_1b](this,_1c);
 }

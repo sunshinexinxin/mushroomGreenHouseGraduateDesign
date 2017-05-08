@@ -18,10 +18,10 @@
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
 	
-	<script src="/graduate-trunk/static/echarts/echarts.min.js"></script>
+	<script src="/mushroomGreenHouseGraduateDesign/static/echarts/echarts.min.js"></script>
 	
-    <link rel="stylesheet" type="text/css" href="/graduate-trunk/static/main/min/Styles/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="/graduate-trunk/static/main/min/Styles/admin-all.css" />
+    <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/min/Styles/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/min/Styles/admin-all.css" />
   
     <script type="text/javascript">
         $(function () {

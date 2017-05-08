@@ -39,8 +39,8 @@ _7(_2);
 }).bind("blur.timespinner",function(){
 _6(_2);
 });
-};
-function _7(_8){
+}
+    function _7(_8){
 var _9=$.data(_8,"timespinner").options;
 var _a=0,_b=0;
 if(_9.highlight==0){
@@ -69,8 +69,8 @@ _c.select();
 }
 }
 $(_8).focus();
-};
-function _d(_e,_f){
+}
+    function _d(_e,_f){
 var _10=$.data(_e,"timespinner").options;
 if(!_f){
 return null;
@@ -85,8 +85,8 @@ while(vv.length<3){
 vv.push(0);
 }
 return new Date(1900,0,0,vv[0],vv[1],vv[2]);
-};
-function _6(_11){
+}
+    function _6(_11){
 var _12=$.data(_11,"timespinner").options;
 var _13=$(_11).val();
 var _14=_d(_11,_13);
@@ -115,9 +115,9 @@ _12.value=val;
 $(_11).val(val);
 function _17(_18){
 return (_18<10?"0":"")+_18;
-};
-};
-function _19(_1a,_1b){
+}
+}
+    function _19(_1a,_1b){
 var _1c=$.data(_1a,"timespinner").options;
 var val=$(_1a).val();
 if(val==""){
@@ -135,8 +135,8 @@ vv[_1c.highlight]+=_1c.increment;
 $(_1a).val(vv.join(_1c.separator));
 _6(_1a);
 _7(_1a);
-};
-$.fn.timespinner=function(_1d,_1e){
+}
+    $.fn.timespinner=function(_1d,_1e){
 if(typeof _1d=="string"){
 var _1f=$.fn.timespinner.methods[_1d];
 if(_1f){

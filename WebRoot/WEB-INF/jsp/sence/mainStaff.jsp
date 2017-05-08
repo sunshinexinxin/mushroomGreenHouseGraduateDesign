@@ -306,7 +306,7 @@
 			<!--左边菜单结束-->
 			<!--右边框架开始-->
 			<div class="right_c">
-				<div class="nav-tip" onclick="javascript:void(0)">
+				<div class="nav-tip" onclick="void(0)">
 					&nbsp;
 				</div>
 

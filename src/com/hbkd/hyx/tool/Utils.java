@@ -80,11 +80,7 @@ public class Utils {
 			if(in == null){
 				in = Utils.class.getResourceAsStream(resource);
 			}
-			if(in == null){
-				existFlag = false;
-			}else{
-				existFlag = true;
-			}
+            existFlag = in != null;
 			return existFlag;
 		}finally{
 			CloseUtil.closeIO(in);

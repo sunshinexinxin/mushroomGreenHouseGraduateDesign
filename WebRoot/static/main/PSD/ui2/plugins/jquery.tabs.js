@@ -17,8 +17,8 @@ _4+=$(this).outerWidth(true);
 var _5=_3.children("div.tabs-wrap").width();
 var _6=parseInt(_3.find("ul.tabs").css("padding-left"));
 return _4-_5+_6;
-};
-function _7(_8){
+}
+    function _7(_8){
 var _9=$.data(_8,"tabs").options;
 var _a=$(_8).children("div.tabs-header");
 var _b=_a.children("div.tabs-tool");
@@ -43,8 +43,8 @@ _b.css("right",0);
 _e.css({marginLeft:0,marginRight:_b.outerWidth(),left:0,width:_10});
 _e.scrollLeft(0);
 }
-};
-function _11(_12){
+}
+    function _11(_12){
 var _13=$.data(_12,"tabs").options;
 var _14=$(_12).children("div.tabs-header");
 if(_13.tools){
@@ -64,8 +64,8 @@ _16.linkbutton($.extend({},_13.tools[i],{plain:true}));
 }else{
 _14.children("div.tabs-tool").remove();
 }
-};
-function _17(_18){
+}
+    function _17(_18){
 var _19=$.data(_18,"tabs").options;
 var cc=$(_18);
 if(_19.fit==true){
@@ -94,8 +94,8 @@ _1b._outerWidth(_1d);
 }else{
 _1b.width("auto");
 }
-};
-function _1e(_1f){
+}
+    function _1e(_1f){
 var _20=$.data(_1f,"tabs").options;
 var tab=_21(_1f);
 if(tab){
@@ -104,8 +104,8 @@ var _23=_20.width=="auto"?"auto":_22.width();
 var _24=_20.height=="auto"?"auto":_22.height();
 tab.panel("resize",{width:_23,height:_24});
 }
-};
-function _25(_26){
+}
+    function _25(_26){
 var _27=$.data(_26,"tabs").tabs;
 var cc=$(_26);
 cc.addClass("tabs-container");
@@ -130,8 +130,8 @@ _1e(_26);
 }
 return false;
 });
-};
-function _2b(_2c){
+}
+    function _2b(_2c){
 var _2d=$.data(_2c,"tabs").options;
 var _2e=$(_2c).children("div.tabs-header");
 var _2f=$(_2c).children("div.tabs-panels");
@@ -157,8 +157,8 @@ var _31=$(".tabs-wrap",_2e);
 var pos=Math.min(_31.scrollLeft()+_2d.scrollIncrement,_1(_2c));
 _31.animate({scrollLeft:pos},_2d.scrollDuration);
 });
-};
-function _32(_33,pp,_34){
+}
+    function _32(_33,pp,_34){
 var _35=$.data(_33,"tabs");
 _34=_34||{};
 pp.panel($.extend({},_34,{border:false,noheader:true,closed:true,doSize:false,iconCls:(_34.icon?_34.icon:undefined),onLoad:function(){
@@ -171,8 +171,8 @@ var _36=pp.panel("options");
 var _37=$(_33).children("div.tabs-header").find("ul.tabs");
 function _38(li){
 return _37.find("li").index(li);
-};
-_36.tab=$("<li></li>").appendTo(_37);
+}
+    _36.tab=$("<li></li>").appendTo(_37);
 _36.tab.unbind(".tabs").bind("click.tabs",function(){
 if($(this).hasClass("tabs-disabled")){
 return;
@@ -224,8 +224,8 @@ _3e.css("right","5px");
 }
 _3a.css("padding-right",pr+"px");
 }
-};
-function _3f(_40,_41){
+}
+    function _3f(_40,_41){
 var _42=$.data(_40,"tabs").options;
 var _43=$.data(_40,"tabs").tabs;
 if(_41.selected==undefined){
@@ -239,8 +239,8 @@ _7(_40);
 if(_41.selected){
 _44(_40,_43.length-1);
 }
-};
-function _45(_46,_47){
+}
+    function _45(_46,_47){
 var _48=$.data(_46,"tabs").selectHis;
 var pp=_47.tab;
 var _49=pp.panel("options").title;
@@ -271,8 +271,8 @@ _48[i]=_4a.title;
 }
 _2b(_46);
 $.data(_46,"tabs").options.onUpdate.call(_46,_4a.title,_4b(_46,pp));
-};
-function _3d(_4c,_4d){
+}
+    function _3d(_4c,_4d){
 var _4e=$.data(_4c,"tabs").options;
 var _4f=$.data(_4c,"tabs").tabs;
 var _50=$.data(_4c,"tabs").selectHis;
@@ -304,8 +304,8 @@ if(_4f.length){
 _44(_4c,0);
 }
 }
-};
-function _52(_56,_57,_58){
+}
+    function _52(_56,_57,_58){
 var _59=$.data(_56,"tabs").tabs;
 if(typeof _57=="number"){
 if(_57<0||_57>=_59.length){
@@ -328,8 +328,8 @@ return tab;
 }
 }
 return null;
-};
-function _4b(_5a,tab){
+}
+    function _4b(_5a,tab){
 var _5b=$.data(_5a,"tabs").tabs;
 for(var i=0;i<_5b.length;i++){
 if(_5b[i][0]==$(tab)[0]){
@@ -337,8 +337,8 @@ return i;
 }
 }
 return -1;
-};
-function _21(_5c){
+}
+    function _21(_5c){
 var _5d=$.data(_5c,"tabs").tabs;
 for(var i=0;i<_5d.length;i++){
 var tab=_5d[i];
@@ -347,8 +347,8 @@ return tab;
 }
 }
 return null;
-};
-function _5e(_5f){
+}
+    function _5e(_5f){
 var _60=$.data(_5f,"tabs").tabs;
 for(var i=0;i<_60.length;i++){
 if(_60[i].panel("options").selected){
@@ -359,8 +359,8 @@ return;
 if(_60.length){
 _44(_5f,0);
 }
-};
-function _44(_61,_62){
+}
+    function _44(_61,_62){
 var _63=$.data(_61,"tabs").options;
 var _64=$.data(_61,"tabs").tabs;
 var _65=$.data(_61,"tabs").selectHis;
@@ -394,11 +394,11 @@ _69.animate({scrollLeft:pos},_63.scrollDuration);
 }
 _1e(_61);
 _63.onSelect.call(_61,_68,_4b(_61,_66));
-};
-function _51(_6d,_6e){
+}
+    function _51(_6d,_6e){
 return _52(_6d,_6e)!=null;
-};
-$.fn.tabs=function(_6f,_70){
+}
+    $.fn.tabs=function(_6f,_70){
 if(typeof _6f=="string"){
 return $.fn.tabs.methods[_6f](this,_70);
 }

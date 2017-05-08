@@ -6,6 +6,13 @@
 
 <struts>
 
+	<!--<constant name="struts.objectFactory" value="spring" />-->
+	<!--<constant name="struts.i18n.encoding" value="UTF-8" />-->
+	<!--<constant name="struts.i18n.reload" value="false" />-->
+	<!--<constant name="struts.configuration.xml.reload" value="false" />-->
+	<!--<constant name="struts.custom.i18n.resources" value="globalMessages" />-->
+	<!--<constant name="struts.action.extension" value="action,," />-->
+
 	<package name="creditList" extends="struts-default" namespace="">
 		<!-- 管理员入口-本行信贷员 -->
 		<action name="creditList" class="creditListAction" method="creditList">
@@ -19,7 +26,15 @@
 		<action name="creditListExport" class="creditListAction" method="creditListExport">
 			<result name="success">/WEB-INF/jsp/sence/bufferPage/CreditExport.jsp</result>
 		</action>
-
 	</package>
 
+
+	<package name="echarts" extends="struts-default" namespace="">
+
+		<!-- 温度湿度图表展示 -->
+		<action name="echarts_temp_wet" class="chartsCollectionAction" method="tempWet">
+			<result name="success">/WEB-INF/jsp/sence/charts/echarts_temp_wet.jsp</result>
+			<result name="error">/WEB-INF/jsp/sence/err404/404.htm</result>
+		</action>
+	</package>
 </struts>

@@ -19,7 +19,7 @@
             modal: true,
             draggabled: false,
             tourl: '',
-        }
+        };
 
 
         /* 
@@ -58,7 +58,7 @@
         }
 
         var o = $.extend(defaults, options);
-        var _modal = '<iframe class="alert-modal"></iframe>'
+        var _modal = '<iframe class="alert-modal"></iframe>';
         function closed() {
             $('.chur-alert').remove();
             $('.alert-modal').remove();
@@ -74,17 +74,17 @@
                     '<a class="close closed" href="#">&times</a>' +
                        '<h4 class="alert-heading">' + o.title + '</h4>' +
                        '<div class="context">' + o.content + '</div>' +
-                            '<div class="rightbtn">' + _button + '</div></div></div>'
+                            '<div class="rightbtn">' + _button + '</div></div></div>';
         if ($('.alert-' + o.type).length < 1) {
             $('body').append(_html);
             $('.alert-' + o.type).show('fast')
-            .find('.closed').live('click', closed)
+            .find('.closed').live('click', closed);
             if (o.modal) {
                 $('body').append(_modal);
             }
             if (o.draggabled) {
                 $('.alert').draggable({ 'containment': 'body' });
             }
-        };
+        }
     };
 })();

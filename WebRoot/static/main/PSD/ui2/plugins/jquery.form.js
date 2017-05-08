@@ -60,9 +60,9 @@ setTimeout(function(){
 _6.unbind();
 _6.remove();
 },100);
-};
-};
-function _b(_c,_d){
+}
+}
+    function _b(_c,_d){
 if(!$.data(_c,"form")){
 $.data(_c,"form",{options:$.extend({},$.fn.form.defaults)});
 }
@@ -99,8 +99,8 @@ _16(_14,val);
 }
 _e.onLoadSuccess.call(_c,_12);
 _1f(_c);
-};
-function _15(_17,val){
+}
+    function _15(_17,val){
 var _18=$(_c);
 var rr=$("input[name=\""+_17+"\"][type=radio], input[name=\""+_17+"\"][type=checkbox]",_18);
 $.fn.prop?rr.prop("checked",false):rr.attr("checked",false);
@@ -111,8 +111,8 @@ $.fn.prop?f.prop("checked",true):f.attr("checked",true);
 }
 });
 return rr;
-};
-function _16(_19,val){
+}
+    function _16(_19,val){
 var _1a=$(_c);
 var cc=["combobox","combotree","combogrid","datetimebox","datebox","combo"];
 var c=_1a.find("[comboName=\""+_19+"\"]");
@@ -129,9 +129,9 @@ return;
 }
 }
 }
-};
-};
-function _1c(_1d){
+}
+}
+    function _1c(_1d){
 $("input,select,textarea",_1d).each(function(){
 var t=this.type,tag=this.tagName.toLowerCase();
 if(t=="text"||t=="hidden"||t=="password"||tag=="textarea"){
@@ -165,8 +165,8 @@ if($.fn.combogrid){
 $(".combogrid-f",_1d).combogrid("clear");
 }
 _1f(_1d);
-};
-function _20(_21){
+}
+    function _20(_21){
 var _22=$.data(_21,"form").options;
 var _23=$(_21);
 _23.unbind(".form").bind("submit.form",function(){
@@ -175,8 +175,8 @@ _1(_21,_22);
 },0);
 return false;
 });
-};
-function _1f(_24){
+}
+    function _1f(_24){
 if($.fn.validatebox){
 var box=$(".validatebox-text",_24);
 if(box.length){
@@ -188,8 +188,8 @@ return _25.length==0;
 }
 }
 return true;
-};
-$.fn.form=function(_26,_27){
+}
+    $.fn.form=function(_26,_27){
 if(typeof _26=="string"){
 return $.fn.form.methods[_26](this,_27);
 }
