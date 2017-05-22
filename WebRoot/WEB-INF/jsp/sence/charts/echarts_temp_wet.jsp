@@ -1,5 +1,4 @@
-﻿
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%-- Struts2标签引入 --%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%
@@ -25,7 +24,7 @@
 
 <div class="alert alert-info">首页<b class="tip"></b>数据报表统计<b class="tip"></b>温度展示</div>
 
-<div id="main_echarts_temp_wet" style="width: 900px;height:600px;"></div>
+<div id="main_echarts_temp_wet" style="width: 900px;height:400px;"></div>
 
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('main_echarts_temp_wet'));
@@ -38,7 +37,7 @@
             trigger: 'axis'
         },
         legend: {
-            data: ['空气温度', '空气湿度', '土壤温度', '土壤湿度', '光照强度','二氧化碳浓度']
+            data: ['空气温度', '空气湿度', '土壤温度', '土壤湿度', '光照强度', '二氧化碳浓度']
         },
         grid: {
             left: '3%',
@@ -54,7 +53,8 @@
         xAxis: {
             type: 'category',
             boundaryGap: false,
-            data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+//            data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日', 'test']
+            data: ${timeList}
         },
         yAxis: {
             type: 'value'
@@ -64,37 +64,43 @@
                 name: '空气温度',
                 type: 'line',
                 stack: '总量',
-                data: [120, 132, 101, 134, 90, 230, 210]
+//                data: [120, 132, 101, 134, 90, 230, 230, 210]
+                data: ${airTempList}
             },
             {
                 name: '空气湿度',
                 type: 'line',
                 stack: '总量',
-                data: [220, 182, 191, 234, 290, 330, 310]
+//                data: [99, 182, 191, 234, 290, 330, 310, 330]
+                data: ${airhumidityList}
             },
             {
                 name: '土壤温度',
                 type: 'line',
                 stack: '总量',
-                data: [150, 232, 201, 154, 190, 330, 410]
+//                data: [150, 232, 201, 154, 190, 330, 410, 330]
+                data: ${soiltempList}
             },
             {
                 name: '土壤湿度',
                 type: 'line',
                 stack: '总量',
-                data: [320, 332, 301, 334, 390, 330, 320]
+//                data: [320, 332, 301, 334, 390, 330, 320, 330]
+                data: ${soilmoistureList}
             },
             {
                 name: '光照强度',
                 type: 'line',
                 stack: '总量',
-                data: [80, 92, 91, 94, 190, 130, 320]
+//                data: [80, 92, 91, 94, 190, 130, 320, 330]
+                data: ${ightintensityList}
             },
             {
                 name: '二氧化碳浓度',
                 type: 'line',
                 stack: '总量',
-                data: [80, 92, 91, 94, 190, 130, 320]
+//                data: [80, 92, 91, 94, 190, 130, 320, 330]
+                data: ${co2densutyList}
             }
         ]
     };

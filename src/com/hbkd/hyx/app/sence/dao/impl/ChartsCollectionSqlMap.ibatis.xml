@@ -17,7 +17,11 @@
     </resultMap>
     <!--echarts 温度图表-->
     <select id="getTempWetListById" resultMap="temp_wet_MapList">
-		select * from tb_mrgh_data_acquisition where mushroom_pointid = #{pointId,jdbcType=NVARCHAR};
+		select * from tb_mrgh_data_acquisition
+		where 1=1
+		and mushroom_pointid = #{pointId,jdbcType=NVARCHAR}
+		order by ctime
+		limit 8;
 	</select>
 </mapper>
 
