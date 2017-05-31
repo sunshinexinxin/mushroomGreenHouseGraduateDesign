@@ -2,6 +2,12 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"    
     "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
+	<settings>
+		<!-- 打印查询语句 -->
+		<setting name="logImpl" value="STDOUT_LOGGING" />
+	</settings>
+
 	<typeAliases>
 		<package name="com.hbkd.hyx.app.login.bean" />
 		<package name="com.hbkd.hyx.app.sence.bean" />
@@ -14,5 +20,6 @@
 		<mapper	resource="com/hbkd/hyx/app/sence/dao/impl/UserInfoSqlMap.ibatis.xml" />
 		<mapper	resource="com/hbkd/hyx/app/sence/dao/impl/CreditListSqlMap.ibatis.xml" />
 		<mapper	resource="com/hbkd/hyx/app/sence/dao/impl/CreditManageSqlMap.ibatis.xml" />
+		<mapper	resource="com/hbkd/hyx/app/sence/dao/impl/ChartsCollectionSqlMap.ibatis.xml" />
 	</mappers>
 </configuration>

@@ -45,8 +45,8 @@ if(!_3.multiple){
 $(_2).combo("hidePanel");
 }
 _3.onClickRow.call(this,_11,row);
-};
-function _c(){
+}
+    function _c(){
 var _12=$.data(_2,"combogrid").remainText;
 var _13=_4.datagrid("getSelections");
 var vv=[],ss=[];
@@ -62,9 +62,9 @@ $(_2).combo("setValues",vv);
 if(!_12){
 $(_2).combo("setText",ss.join(_3.separator));
 }
-};
-};
-function _14(_15,_16){
+}
+}
+    function _14(_15,_16){
 var _17=$.data(_15,"combogrid").options;
 var _18=$.data(_15,"combogrid").grid;
 var _19=_18.datagrid("getRows").length;
@@ -95,8 +95,8 @@ if(_1a>=0){
 _18.datagrid("clearSelections");
 _18.datagrid("selectRow",_1a);
 }
-};
-function _1c(_1d,_1e,_1f){
+}
+    function _1c(_1d,_1e,_1f){
 var _20=$.data(_1d,"combogrid").options;
 var _21=$.data(_1d,"combogrid").grid;
 var _22=_21.datagrid("getRows");
@@ -117,8 +117,8 @@ $(_1d).combo("setValues",_1e);
 if(!_1f){
 $(_1d).combo("setText",ss.join(_20.separator));
 }
-};
-function _24(_25,q){
+}
+    function _24(_25,q){
 var _26=$.data(_25,"combogrid").options;
 var _27=$.data(_25,"combogrid").grid;
 $.data(_25,"combogrid").remainText=true;
@@ -143,8 +143,8 @@ return;
 }
 }
 }
-};
-$.fn.combogrid=function(_29,_2a){
+}
+    $.fn.combogrid=function(_29,_2a){
 if(typeof _29=="string"){
 var _2b=$.fn.combogrid.methods[_29];
 if(_2b){

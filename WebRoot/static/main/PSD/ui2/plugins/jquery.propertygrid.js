@@ -42,9 +42,9 @@ t.datagrid("endEdit",_a);
 }else{
 t.datagrid("cancelEdit",_a);
 }
-};
-};
-$.fn.propertygrid=function(_b,_c){
+}
+}
+    $.fn.propertygrid=function(_b,_c){
 if(typeof _b=="string"){
 var _d=$.fn.propertygrid.methods[_b];
 if(_d){
@@ -150,8 +150,8 @@ return _2c;
 }
 }
 return null;
-};
-this.groups=_28;
+}
+    this.groups=_28;
 var _2d=[];
 for(var i=0;i<_28.length;i++){
 var _29=_28[i];

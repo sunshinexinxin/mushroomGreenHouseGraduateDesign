@@ -12,8 +12,8 @@ function _1(_2){
 var _3=$("<span class=\"spinner\">"+"<span class=\"spinner-arrow\">"+"<span class=\"spinner-arrow-up\"></span>"+"<span class=\"spinner-arrow-down\"></span>"+"</span>"+"</span>").insertAfter(_2);
 $(_2).addClass("spinner-text").prependTo(_3);
 return _3;
-};
-function _4(_5,_6){
+}
+    function _4(_5,_6){
 var _7=$.data(_5,"spinner").options;
 var _8=$.data(_5,"spinner").spinner;
 if(_6){
@@ -28,8 +28,8 @@ _8._outerWidth(_7.width);
 $(_5)._outerWidth(_8.width()-_8.find(".spinner-arrow").outerWidth());
 _8.insertAfter(_9);
 _9.remove();
-};
-function _a(_b){
+}
+    function _a(_b){
 var _c=$.data(_b,"spinner").options;
 var _d=$.data(_b,"spinner").spinner;
 _d.find(".spinner-arrow-up,.spinner-arrow-down").unbind(".spinner");
@@ -53,8 +53,8 @@ _c.onSpinDown.call(_b);
 $(_b).validatebox("validate");
 });
 }
-};
-function _e(_f,_10){
+}
+    function _e(_f,_10){
 var _11=$.data(_f,"spinner").options;
 if(_10){
 _11.disabled=true;
@@ -63,8 +63,8 @@ $(_f).attr("disabled",true);
 _11.disabled=false;
 $(_f).removeAttr("disabled");
 }
-};
-$.fn.spinner=function(_12,_13){
+}
+    $.fn.spinner=function(_12,_13){
 if(typeof _12=="string"){
 var _14=$.fn.spinner.methods[_12];
 if(_14){

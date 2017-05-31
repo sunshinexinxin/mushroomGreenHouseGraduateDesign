@@ -5,5 +5,5 @@ import java.util.Map;
 
 public interface CreditManageDao {
 
-	public Object getCreditManage(Map<String, String> map);
+	Object getCreditManage(Map<String, String> map);
 }

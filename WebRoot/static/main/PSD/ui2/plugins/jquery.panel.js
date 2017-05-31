@@ -15,8 +15,8 @@ if($.browser.msie){
 this.outerHTML="";
 }
 });
-};
-function _3(_4,_5){
+}
+    function _3(_4,_5){
 var _6=$.data(_4,"panel").options;
 var _7=$.data(_4,"panel").panel;
 var _8=_7.children("div.panel-header");
@@ -60,8 +60,8 @@ _9.height("auto");
 _7.css("height","");
 _6.onResize.apply(_4,[_6.width,_6.height]);
 _7.find(">div.panel-body>div").triggerHandler("_resize");
-};
-function _a(_b,_c){
+}
+    function _a(_b,_c){
 var _d=$.data(_b,"panel").options;
 var _e=$.data(_b,"panel").panel;
 if(_c){
@@ -74,8 +74,8 @@ _d.top=_c.top;
 }
 _e.css({left:_d.left,top:_d.top});
 _d.onMove.apply(_b,[_d.left,_d.top]);
-};
-function _f(_10){
+}
+    function _f(_10){
 $(_10).addClass("panel-body");
 var _11=$("<div class=\"panel\"></div>").insertBefore(_10);
 _11[0].appendChild(_10);
@@ -87,8 +87,8 @@ _3(_10);
 return false;
 });
 return _11;
-};
-function _13(_14){
+}
+    function _13(_14){
 var _15=$.data(_14,"panel").options;
 var _16=$.data(_14,"panel").panel;
 if(_15.tools&&typeof _15.tools=="string"){
@@ -155,8 +155,8 @@ _16.children("div.panel-body").removeClass("panel-body-noheader");
 }else{
 _16.children("div.panel-body").addClass("panel-body-noheader");
 }
-};
-function _1a(_1b){
+}
+    function _1a(_1b){
 var _1c=$.data(_1b,"panel");
 if(_1c.options.href&&(!_1c.isLoaded||!_1c.options.cache)){
 _1c.isLoaded=false;
@@ -174,8 +174,8 @@ _1c.options.onLoad.apply(_1b,arguments);
 _1c.isLoaded=true;
 }});
 }
-};
-function _1d(_20){
+}
+    function _1d(_20){
 var t=$(_20);
 t.find(".combo-f").each(function(){
 $(this).combo("destroy");
@@ -186,13 +186,13 @@ $(this).menubutton("destroy");
 t.find(".s-btn").each(function(){
 $(this).splitbutton("destroy");
 });
-};
-function _21(_22){
+}
+    function _21(_22){
 $(_22).find("div.panel:visible,div.accordion:visible,div.tabs-container:visible,div.layout:visible").each(function(){
 $(this).triggerHandler("_resize",[true]);
 });
-};
-function _23(_24,_25){
+}
+    function _23(_24,_25){
 var _26=$.data(_24,"panel").options;
 var _27=$.data(_24,"panel").panel;
 if(_25!=true){
@@ -216,8 +216,8 @@ if(!_26.collapsed){
 _1a(_24);
 _21(_24);
 }
-};
-function _19(_2a,_2b){
+}
+    function _19(_2a,_2b){
 var _2c=$.data(_2a,"panel").options;
 var _2d=$.data(_2a,"panel").panel;
 if(_2b!=true){
@@ -228,8 +228,8 @@ return;
 _2d.hide();
 _2c.closed=true;
 _2c.onClose.call(_2a);
-};
-function _2e(_2f,_30){
+}
+    function _2e(_2f,_30){
 var _31=$.data(_2f,"panel").options;
 var _32=$.data(_2f,"panel").panel;
 if(_30!=true){
@@ -240,8 +240,8 @@ return;
 _1d(_2f);
 _1(_32);
 _31.onDestroy.call(_2f);
-};
-function _29(_33,_34){
+}
+    function _29(_33,_34){
 var _35=$.data(_33,"panel").options;
 var _36=$.data(_33,"panel").panel;
 var _37=_36.children("div.panel-body");
@@ -264,8 +264,8 @@ _37.hide();
 _35.collapsed=true;
 _35.onCollapse.call(_33);
 }
-};
-function _39(_3a,_3b){
+}
+    function _39(_3a,_3b){
 var _3c=$.data(_3a,"panel").options;
 var _3d=$.data(_3a,"panel").panel;
 var _3e=_3d.children("div.panel-body");
@@ -292,8 +292,8 @@ _3c.onExpand.call(_3a);
 _1a(_3a);
 _21(_3a);
 }
-};
-function _28(_40){
+}
+    function _28(_40){
 var _41=$.data(_40,"panel").options;
 var _42=$.data(_40,"panel").panel;
 var _43=_42.children("div.panel-header").find("a.panel-tool-max");
@@ -311,16 +311,16 @@ _3(_40);
 _41.minimized=false;
 _41.maximized=true;
 _41.onMaximize.call(_40);
-};
-function _44(_45){
+}
+    function _44(_45){
 var _46=$.data(_45,"panel").options;
 var _47=$.data(_45,"panel").panel;
 _47.hide();
 _46.minimized=true;
 _46.maximized=false;
 _46.onMinimize.call(_45);
-};
-function _48(_49){
+}
+    function _48(_49){
 var _4a=$.data(_49,"panel").options;
 var _4b=$.data(_49,"panel").panel;
 var _4c=_4b.children("div.panel-header").find("a.panel-tool-max");
@@ -340,8 +340,8 @@ _4a.minimized=false;
 _4a.maximized=false;
 $.data(_49,"panel").original=null;
 _4a.onRestore.call(_49);
-};
-function _4e(_4f){
+}
+    function _4e(_4f){
 var _50=$.data(_4f,"panel").options;
 var _51=$.data(_4f,"panel").panel;
 var _52=$(_4f).panel("header");
@@ -362,12 +362,12 @@ $(_4f).attr("id",_50.id);
 }else{
 $(_4f).attr("id","");
 }
-};
-function _54(_55,_56){
+}
+    function _54(_55,_56){
 $.data(_55,"panel").options.title=_56;
 $(_55).panel("header").find("div.panel-title").html(_56);
-};
-var TO=false;
+}
+    var TO=false;
 var _57=true;
 $(window).unbind(".panel").bind("resize.panel",function(){
 if(!_57){

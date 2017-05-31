@@ -35,18 +35,21 @@ create table tb_mrgh_monitor(
 	mushroom_status int,#大棚监控状态，0：非监控；1：监控中
 	mushroom_long varchar(32),#大棚的经度
 	mushroom_lat varchar(32),#大棚的纬度
+	mushroom_length varchar(32),#大棚的长度
+	mushroom_width varchar(32),#大棚的宽度
+	mushroom_area varchar(32),#大棚的面积
 	del_flag varchar(32),   #删除标识.初始为0;删除为1.
 	memo varchar(32),  #备注
   ctime varchar(32)  #创建时间
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-insert into tb_mrgh_monitor values(1001,'001','1号大棚','2017022010001','我是一个大棚','1','114.2010280000','38.8550600000','0','我是备注','20170326182636');
-insert into tb_mrgh_monitor values(1002,'002','2号大棚','2017022010002','我是一个大棚','1','114.1999860000','38.8543850000','0','我是备注','20170326182636');
-insert into tb_mrgh_monitor values(1003,'003','3号大棚','2017022010003','我是一个大棚','1','114.2007760000','38.8508730000','0','我是备注','20170326182636');
-insert into tb_mrgh_monitor values(1004,'004','4号大棚','2017022010001','我是一个大棚','1','114.2007750000','38.8508730000','0','我是备注','20170326182636');
-insert into tb_mrgh_monitor values(1005,'005','5号大棚','2017022010002','我是一个大棚','1','114.2001700000','38.8508770000','0','我是备注','20170326182636');
-insert into tb_mrgh_monitor values(1006,'006','6号大棚','2017022010001','我是一个大棚','1','114.2004760000','38.8502730000','0','我是备注','20170326182636');
-insert into tb_mrgh_monitor values(1007,'007','7号大棚','2017022010003','我是一个大棚','1','114.2006760000','38.8506730000','0','我是备注','20170326182636');
+insert into tb_mrgh_monitor values(1001,'001','1号大棚','2017022010001','我是一个大棚','1','114.2010280000','38.8550600000','30','5','150','0','我是备注','20170326182636');
+insert into tb_mrgh_monitor values(1002,'002','2号大棚','2017022010002','我是一个大棚','1','114.1999860000','38.8543850000','30','5','150','0','我是备注','20170326182636');
+insert into tb_mrgh_monitor values(1003,'003','3号大棚','2017022010003','我是一个大棚','1','114.2007760000','38.8508730000','30','5','150','0','我是备注','20170326182636');
+insert into tb_mrgh_monitor values(1004,'004','4号大棚','2017022010001','我是一个大棚','1','114.2007750000','38.8508730000','30','5','150','0','我是备注','20170326182636');
+insert into tb_mrgh_monitor values(1005,'005','5号大棚','2017022010002','我是一个大棚','1','114.2001700000','38.8508770000','30','5','150','0','我是备注','20170326182636');
+insert into tb_mrgh_monitor values(1006,'006','6号大棚','2017022010001','我是一个大棚','1','114.2004760000','38.8502730000','30','5','150','0','我是备注','20170326182636');
+insert into tb_mrgh_monitor values(1007,'007','7号大棚','2017022010003','我是一个大棚','1','114.2006760000','38.8506730000','30','5','150','0','我是备注','20170326182636');
 
 
 #创建大棚数据采集表
@@ -54,7 +57,7 @@ drop table tb_mrgh_data_acquisition;
 create table tb_mrgh_data_acquisition(
 	idno int not null auto_increment primary key,
 	mushroom_pointid varchar(32) not null ,#大棚编号，如001;002
-	mushroom_airtemp varchar(16) not null,#空气温度
+	mushroom_airtemp varchar(16) not null,#空气温度 30
 	mushroom_airhumidity varchar(16) not null,#空气湿度，相对湿度，单位%
 	mushroom_soiltemp varchar(16) not null,#土壤温度
 	mushroom_soilmoisture varchar(16) not null,#土壤湿度，相对湿度，单位%
@@ -64,4 +67,17 @@ create table tb_mrgh_data_acquisition(
   ctime varchar(32)  #时间
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-#创建大棚
+
+#大棚作物表
+drop table tb_mrgh_crop;
+create table tb_mrgh_crop(
+	idno int not null auto_increment primary key,
+	mushroom_pointid varchar(32) not null ,#大棚编号，如001;002;
+	mushroom_crop_no varchar(16) not null,#作物编号
+	mushroom_crop_name varchar(16) not null,#作物名称
+	mushroom_plant_time varchar(16) not null,#种植时间
+	mushroom_plant_cnt varchar(16) not null,#种植数量
+	del_flag varchar(16) not null ,
+	memo varchar(32),  #备注
+  ctime varchar(32)  #时间
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -231,7 +231,7 @@ public class JsonKit {
 			return listToJson(list, depth);
 		}
 		if (value instanceof Enum) {
-			return "\"" + ((Enum)value).toString() + "\"";
+			return "\"" + value.toString() + "\"";
 		}
 		
 		return beanToJson(value, depth);
@@ -349,7 +349,7 @@ public class JsonKit {
 			while(rankIdx < jsonLen){
 				char rankChar = json.charAt(rankIdx);
 				if(rankChar == '}'){
-					list.add((Map) parseValue(json.substring(preIdx,rankIdx+1)));
+					list.add(parseValue(json.substring(preIdx,rankIdx+1)));
 					preIdx = rankIdx+1;
 					while(preIdx<jsonLen&&json.charAt(preIdx)!=','){
 						preIdx++;

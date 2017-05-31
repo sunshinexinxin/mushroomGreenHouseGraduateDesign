@@ -104,9 +104,8 @@ $.widget("ui.resizable", $.ui.mouse, {
 				//TODO : What's going on here?
 				if ('se' == handle) {
 					axis.addClass('ui-icon ui-icon-gripsmall-diagonal-se');
-				};
-
-				//Insert into internal handles object and append to element
+                }
+                //Insert into internal handles object and append to element
 				this.handles[handle] = '.ui-resizable-'+handle;
 				this.element.append(axis);
 			}
@@ -144,7 +143,7 @@ $.widget("ui.resizable", $.ui.mouse, {
 
 				//TODO: What's that good for? There's not anything to be executed left
 				if(!$(this.handles[i]).length)
-					continue;
+
 
 			}
 		};
@@ -453,9 +452,8 @@ $.widget("ui.resizable", $.ui.mouse, {
 				width: (element.width() - this.borderDif[1] - this.borderDif[3]) || 0
 			});
 
-		};
-
-	},
+}
+    },
 
 	_renderProxy: function() {
 

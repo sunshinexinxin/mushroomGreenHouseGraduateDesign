@@ -38,16 +38,16 @@
             $(this).animate({
                 "background-position-x": "0"
             }, 300);
-        };
-    })
+        }
+    });
     //横向菜单
     $('.top-menu-nav li').click(function () {
         $('.kidc').hide();
         $(this).find('.kidc').show();
         
-    })
+    });
     $('.kidc').bind('mouseleave', function () {
         $('.kidc').hide();
     }) 
 
-})
+});

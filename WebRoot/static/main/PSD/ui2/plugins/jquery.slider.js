@@ -16,8 +16,8 @@ _3.find("input.slider-value").attr("name",_4);
 $(_2).removeAttr("name").attr("sliderName",_4);
 }
 return _3;
-};
-function _5(_6,_7){
+}
+    function _5(_6,_7){
 var _8=$.data(_6,"slider").options;
 var _9=$.data(_6,"slider").slider;
 if(_7){
@@ -45,8 +45,8 @@ _9.find("div.slider-inner")._outerHeight(_8.height);
 }
 }
 _a(_6);
-};
-function _b(_c){
+}
+    function _b(_c){
 var _d=$.data(_c,"slider").options;
 var _e=$.data(_c,"slider").slider;
 if(_d.mode=="h"){
@@ -73,9 +73,9 @@ _13.css({top:_12,marginTop:-Math.round(_13.outerHeight()/2)});
 }
 }
 }
-};
-};
-function _14(_15){
+}
+}
+    function _14(_15){
 var _16=$.data(_15,"slider").options;
 var _17=$.data(_15,"slider").slider;
 _17.removeClass("slider-h slider-v slider-disabled");
@@ -110,9 +110,9 @@ _1d-=s;
 _1d=_1d-s+_16.step;
 }
 _1e(_15,_1d);
-};
-};
-function _1e(_1f,_20){
+}
+}
+    function _1e(_1f,_20){
 var _21=$.data(_1f,"slider").options;
 var _22=$.data(_1f,"slider").slider;
 var _23=_21.value;
@@ -145,16 +145,16 @@ tip.attr("style",_25+"margin-left:"+(-Math.round(tip.outerWidth()))+"px");
 if(_23!=_20){
 _21.onChange.call(_1f,_20,_23);
 }
-};
-function _a(_26){
+}
+    function _a(_26){
 var _27=$.data(_26,"slider").options;
 var fn=_27.onChange;
 _27.onChange=function(){
 };
 _1e(_26,_27.value);
 _27.onChange=fn;
-};
-function _24(_28,_29){
+}
+    function _24(_28,_29){
 var _2a=$.data(_28,"slider").options;
 var _2b=$.data(_28,"slider").slider;
 if(_2a.mode=="h"){
@@ -163,8 +163,8 @@ var pos=(_29-_2a.min)/(_2a.max-_2a.min)*_2b.width();
 var pos=_2b.height()-(_29-_2a.min)/(_2a.max-_2a.min)*_2b.height();
 }
 return pos.toFixed(0);
-};
-function _2c(_2d,pos){
+}
+    function _2c(_2d,pos){
 var _2e=$.data(_2d,"slider").options;
 var _2f=$.data(_2d,"slider").slider;
 if(_2e.mode=="h"){
@@ -173,8 +173,8 @@ var _30=_2e.min+(_2e.max-_2e.min)*(pos/_2f.width());
 var _30=_2e.min+(_2e.max-_2e.min)*((_2f.height()-pos)/_2f.height());
 }
 return _30.toFixed(0);
-};
-$.fn.slider=function(_31,_32){
+}
+    $.fn.slider=function(_31,_32){
 if(typeof _31=="string"){
 return $.fn.slider.methods[_31](this,_32);
 }

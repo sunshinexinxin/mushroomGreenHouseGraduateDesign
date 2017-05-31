@@ -44,25 +44,25 @@ _3.calendar.calendar({year:new Date().getFullYear(),month:new Date().getMonth()+
 _9.find(".datebox-close").click(function(){
 $(_2).combo("hidePanel");
 });
-};
-};
-function _a(_b,q){
+}
+}
+    function _a(_b,q){
 _c(_b,q);
-};
-function _d(_e){
+}
+    function _d(_e){
 var _f=$.data(_e,"datebox").options;
 var c=$.data(_e,"datebox").calendar;
 var _10=_f.formatter(c.calendar("options").current);
 _c(_e,_10);
 $(_e).combo("hidePanel");
-};
-function _c(_11,_12){
+}
+    function _c(_11,_12){
 var _13=$.data(_11,"datebox");
 var _14=_13.options;
 $(_11).combo("setValue",_12).combo("setText",_12);
 _13.calendar.calendar("moveTo",_14.parser(_12));
-};
-$.fn.datebox=function(_15,_16){
+}
+    $.fn.datebox=function(_15,_16){
 if(typeof _15=="string"){
 var _17=$.fn.datebox.methods[_15];
 if(_17){

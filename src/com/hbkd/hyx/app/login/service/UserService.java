@@ -9,7 +9,7 @@ import javax.xml.ws.ServiceMode;
 @ServiceMode
 public interface UserService {
 
-	public User getUserById(String id);
+	User getUserById(String id);
 
 //	public List<User> getUserList(String id);
 }

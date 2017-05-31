@@ -649,9 +649,8 @@ $.ui.plugin.add("draggable", "connectToSortable", {
 					inst.dropped = false; //draggable revert needs that
 				}
 
-			};
-
-		});
+}
+        });
 
 	}
 });
@@ -793,9 +792,8 @@ $.ui.plugin.add("draggable", "snap", {
 				(inst.options.snap.snap && inst.options.snap.snap.call(inst.element, event, $.extend(inst._uiHash(), { snapItem: inst.snapElements[i].item })));
 			inst.snapElements[i].snapping = (ts || bs || ls || rs || first);
 
-		};
-
-	}
+}
+    }
 });
 
 $.ui.plugin.add("draggable", "stack", {

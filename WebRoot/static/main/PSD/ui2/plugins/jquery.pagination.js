@@ -43,8 +43,8 @@ var a=$("<a href=\"javascript:void(0)\"></a>").appendTo(tr);
 a.wrap("<td></td>");
 a.linkbutton({iconCls:_5[_a].iconCls,plain:true}).unbind(".pagination").bind("click.pagination",_5[_a].handler);
 return a;
-};
-if(_4.showPageList){
+}
+    if(_4.showPageList){
 var ps=$("<select class=\"pagination-page-list\"></select>");
 ps.bind("change",function(){
 _4.pageSize=parseInt($(this).val());
@@ -92,13 +92,13 @@ $("<a href=\"javascript:void(0)\"></a>").appendTo(td).linkbutton($.extend(_c,{pl
 }
 $("<div class=\"pagination-info\"></div>").appendTo(_8);
 $("<div style=\"clear:both;\"></div>").appendTo(_8);
-};
-function _d(_e,_f){
+}
+    function _d(_e,_f){
 var _10=$.data(_e,"pagination").options;
 _11(_e,{pageNumber:_f});
 _10.onSelectPage.call(_e,_10.pageNumber,_10.pageSize);
-};
-function _11(_12,_13){
+}
+    function _11(_12,_13){
 var _14=$.data(_12,"pagination").options;
 var bb=$.data(_12,"pagination").bb;
 $.extend(_14,_13||{});
@@ -124,8 +124,8 @@ $(_12).find("div.pagination-info").html(_16);
 bb.first.add(bb.prev).linkbutton({disabled:(_14.pageNumber==1)});
 bb.next.add(bb.last).linkbutton({disabled:(_14.pageNumber==_15)});
 _17(_12,_14.loading);
-};
-function _17(_18,_19){
+}
+    function _17(_18,_19){
 var _1a=$.data(_18,"pagination").options;
 var bb=$.data(_18,"pagination").bb;
 _1a.loading=_19;
@@ -136,8 +136,8 @@ bb.refresh.linkbutton({iconCls:"pagination-loading"});
 bb.refresh.linkbutton({iconCls:"pagination-load"});
 }
 }
-};
-$.fn.pagination=function(_1b,_1c){
+}
+    $.fn.pagination=function(_1b,_1c){
 if(typeof _1b=="string"){
 return $.fn.pagination.methods[_1b](this,_1c);
 }

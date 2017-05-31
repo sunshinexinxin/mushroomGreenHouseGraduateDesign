@@ -16,19 +16,19 @@ v.attr("name",_3);
 $(_2).removeAttr("name").attr("numberboxName",_3);
 }
 return v;
-};
-function _4(_5){
+}
+    function _4(_5){
 var _6=$.data(_5,"numberbox").options;
 var fn=_6.onChange;
 _6.onChange=function(){
 };
 _7(_5,_6.parser.call(_5,_6.value));
 _6.onChange=fn;
-};
-function _8(_9){
+}
+    function _8(_9){
 return $.data(_9,"numberbox").field.val();
-};
-function _7(_a,_b){
+}
+    function _7(_a,_b){
 var _c=$.data(_a,"numberbox");
 var _d=_c.options;
 var _e=_8(_a);
@@ -39,8 +39,8 @@ $(_a).val(_d.formatter.call(_a,_b));
 if(_e!=_b){
 _d.onChange.call(_a,_b,_e);
 }
-};
-function _f(_10){
+}
+    function _f(_10){
 var _11=$.data(_10,"numberbox").options;
 $(_10).unbind(".numberbox").bind("keypress.numberbox",function(e){
 if(e.which==45){
@@ -89,14 +89,14 @@ if($(this).val()!=vv){
 $(this).val(vv);
 }
 });
-};
-function _12(_13){
+}
+    function _12(_13){
 if($.fn.validatebox){
 var _14=$.data(_13,"numberbox").options;
 $(_13).validatebox(_14);
 }
-};
-function _15(_16,_17){
+}
+    function _15(_16,_17){
 var _18=$.data(_16,"numberbox").options;
 if(_17){
 _18.disabled=true;
@@ -105,8 +105,8 @@ $(_16).attr("disabled",true);
 _18.disabled=false;
 $(_16).removeAttr("disabled");
 }
-};
-$.fn.numberbox=function(_19,_1a){
+}
+    $.fn.numberbox=function(_19,_1a){
 if(typeof _19=="string"){
 var _1b=$.fn.numberbox.methods[_19];
 if(_1b){
