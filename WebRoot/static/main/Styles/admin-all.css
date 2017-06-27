@@ -4,12 +4,15 @@
 
 .warp {
     height: 100%;
-    background: #7b8aa1;
+    background: -o-linear-gradient(#002a43, #000220);
+background: -moz-linear-gradient(#002a43, #000220);
+background: linear-gradient(#002a43, #000220);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002a43', endColorstr='#000220',GradientType=0 ); 
 }
 
 
 .top_c {
-    background: url(../img/logo.png) no-repeat #586683;
+	background: url(../img/logo.png) no-repeat ; 
     height: 97px;
     position: relative;
 }
@@ -53,7 +56,10 @@
         }
 
 .top-menu-nav .kidc {
-    background: #FEFAF4;
+        background: -o-linear-gradient(#002a43, #000220);
+background: -moz-linear-gradient(#002a43, #000220);
+background: linear-gradient(#002a43, #000220);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002a43', endColorstr='#000220',GradientType=0 ); 
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     z-index: 9999;
@@ -63,6 +69,7 @@
     margin-top: 10px;
     border: 1px solid #afbbd5;
     display: none;
+    color:#fff;
 }
 
     .top-menu-nav .kidc li {
@@ -70,13 +77,16 @@
         background: none;
         border: none;
         padding: 3px 20px;
+        border-bottom:1px solid #333;
     }
 
         .top-menu-nav .kidc li:hover {
             background: #3a6aee;
             color: #FFF;
         }
-
+.top-menu-nav .kidc li a{
+	color:#fff;
+}
         .top-menu-nav .kidc li a:hover {
             background: #3a6aee;
             color: #FFF;
@@ -276,7 +286,10 @@
 .bottom_c {
     position: absolute;
     bottom: 0;
-    background: #586683;
+    background:  -o-linear-gradient(#002a43, #000220);
+	background: -moz-linear-gradient(#002a43, #000220);
+	background: linear-gradient(#002a43, #000220);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002a43', endColorstr='#000220',GradientType=0 ); 
     width: 100%;
     text-align: center;
     color: #CCD8E8;
