@@ -51,8 +51,16 @@
 	<bean id="loginAction" class="com.hbkd.hyx.app.login.action.LoginAction"
 		scope="prototype">
 		<property name="userService" ref="userService" />
+		<property name="userInfoService" ref="userInfoService"></property>
 	</bean>
 
+	<!--首页-地图加载-->
+	<bean id="userInfoDao" class="com.hbkd.hyx.app.sence.dao.impl.UserInfoDaoImpl">
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+	</bean>
+	<bean id="userInfoService" class="com.hbkd.hyx.app.sence.service.impl.UserInfoServiceImpl">
+		<property name="userInfoDao" ref="userInfoDao"></property>
+	</bean>
 
 	<!-- 以上三种Bean的配置，在实际项目中应处于相对独立的文件中,在该文件中引入 -->
 

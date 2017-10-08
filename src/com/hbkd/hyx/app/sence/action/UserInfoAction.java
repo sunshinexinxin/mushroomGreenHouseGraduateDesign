@@ -9,13 +9,15 @@ import org.apache.log4j.Logger;
 
 import java.util.List;
 
+//个人中心模块
 public class UserInfoAction extends BaseAction {
 
     Logger logger = Logger.getLogger(UserInfoAction.class);
+
+    // 注入属性
     // 注入UserService
     private UserInfoService userInfoService;
 
-    // 注入属性
     private String userId;
     private List<Monitor> userInfoList = null;
 

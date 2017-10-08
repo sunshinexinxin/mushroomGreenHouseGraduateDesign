@@ -2,10 +2,12 @@ package com.hbkd.hyx.app.login.action;
 
 import com.hbkd.hyx.app.login.bean.User;
 import com.hbkd.hyx.app.login.service.UserService;
+import com.hbkd.hyx.app.sence.bean.Monitor;
+import com.hbkd.hyx.app.sence.service.UserInfoService;
 import com.hbkd.hyx.core.mvc.BaseAction;
+import com.hbkd.hyx.tool.StrKit;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -14,20 +16,26 @@ public class LoginAction extends BaseAction {
     protected final Logger logger = Logger.getLogger(LoginAction.class);
 
     private static final long serialVersionUID = -22247146217995282L;
-    // 注入UserService
-    @Autowired
+    //此属性名必须和spring配置文件中的id名一致
+
     private UserService userService;
+
     /**
      * 以上注入的service、属性 必须要有getter、setter方法 setter 方法用于接受页面传入参数 getter方法用于返回页面,展示
      * <p>
      * Struts2 中 定义的属性 必须要有getter、setter方法 Spring 配置文件中
      * 定义的bean也必须要有getter、setter方法
      */
-    // 注入属性
+
     private User user;
     private String userName;
     private String userPwd;
     private List<User> userList;
+
+    //@Autowired
+    //复用类，根据用户 id 获取地图经纬度
+    private UserInfoService userInfoService;
+    private List<Monitor> mushRoomList = null;
 
     /**
      * 登录方法
@@ -72,7 +80,16 @@ public class LoginAction extends BaseAction {
      *
      * @return
      */
-    public String mushRoomMap(){
+    public String mushRoomMap() {
+        //首先获取 userID, 然后根据 userId 获取个人数据
+        String userId = ActionContext.getContext().getSession().get("userId").toString();
+        logger.debug("get userId from session  userId:" + userId);
+        if (StrKit.isBlank(userId)) return ERROR;
+
+        //查询蘑菇大棚
+        mushRoomList = userInfoService.getUserInfoList(userId);
+        ActionContext.getContext().getSession().put("mushRoomList", mushRoomList);
+        super.getRequest().setAttribute("mushRoomList", mushRoomList);
         return SUCCESS;
     }
 
@@ -124,5 +141,36 @@ public class LoginAction extends BaseAction {
         return serialVersionUID;
     }
 
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
+    public List<Monitor> getMushRoomList() {
+        return mushRoomList;
+    }
+
+    public void setMushRoomList(List<Monitor> mushRoomList) {
+        this.mushRoomList = mushRoomList;
+    }
+
+    public UserInfoService getUserInfoService() {
+        return userInfoService;
+    }
+
+    public void setUserInfoService(UserInfoService userInfoService) {
+        this.userInfoService = userInfoService;
+    }
+
+    @Override
+    public String toString() {
+        return "LoginAction{" +
+                "userService=" + userService +
+                ", user=" + user +
+                ", userName='" + userName + '\'' +
+                ", userPwd='" + userPwd + '\'' +
+                ", userList=" + userList +
+                ", userInfoService=" + userInfoService +
+                ", mushRoomList=" + mushRoomList +
+                '}';
+    }
 }
