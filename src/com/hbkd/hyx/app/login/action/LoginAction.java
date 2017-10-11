@@ -88,8 +88,7 @@ public class LoginAction extends BaseAction {
 
         //查询蘑菇大棚
         mushRoomList = userInfoService.getUserInfoList(userId);
-        ActionContext.getContext().getSession().put("mushRoomList", mushRoomList);
-        super.getRequest().setAttribute("mushRoomList", mushRoomList);
+        ActionContext.getContext().put("mushRoomList", mushRoomList);
         return SUCCESS;
     }
 

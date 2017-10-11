@@ -52,8 +52,8 @@
         <div class="top-menu">
             <ul class="top-menu-nav">
                 <li>
-                    <a target="Conframe" href="/mushroomGreenHouseGraduateDesign/user/mushRoomMap.action" id="123"
-                       name="123">首页</a>
+                    <a target="Conframe" href="/mushroomGreenHouseGraduateDesign/user/mushRoomMap.action" id="homePage"
+                       name="homePage">首页</a>
                 </li>
                 <li>
                     <a href="#">信息发布<i class="tip-up"></i>
@@ -329,6 +329,6 @@
     </div>
     <!--底部结束-->
 </div>
-
+<%--<script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/js/sence/mainManager.js"></script>--%>
 </body>
 </html>
