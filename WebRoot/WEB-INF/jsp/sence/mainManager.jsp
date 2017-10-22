@@ -22,6 +22,8 @@
     <script type="text/javascript"
             src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/jquery-ui-1.8.22.custom.min.js"></script>
     <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/index.js"></script>
+    <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/js/sence/mainManager.js"></script>
+
 
     <script type="text/javascript">
         function fireEvent(element, event) {

@@ -5,12 +5,19 @@ import com.hbkd.hyx.app.login.service.UserService;
 import com.hbkd.hyx.app.sence.bean.Monitor;
 import com.hbkd.hyx.app.sence.service.UserInfoService;
 import com.hbkd.hyx.core.mvc.BaseAction;
+import com.hbkd.hyx.tool.Constant;
 import com.hbkd.hyx.tool.StrKit;
 import com.opensymphony.xwork2.ActionContext;
+import net.sf.json.JSONArray;
 import org.apache.log4j.Logger;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+/**
+ * @author anke
+ */
 public class LoginAction extends BaseAction {
 
     protected final Logger logger = Logger.getLogger(LoginAction.class);
@@ -32,10 +39,12 @@ public class LoginAction extends BaseAction {
     private String userPwd;
     private List<User> userList;
 
-    //@Autowired
-    //复用类，根据用户 id 获取地图经纬度
+
+    /**
+     * 复用类，根据用户 id 获取地图经纬度
+     */
     private UserInfoService userInfoService;
-    private List<Monitor> mushRoomList = null;
+//    private List<Monitor> mushRoomList = null;
 
     /**
      * 登录方法
@@ -55,9 +64,9 @@ public class LoginAction extends BaseAction {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-                    if (user.getStatus().equals("0") || user.getStatus().equals("1")) {
+                    if (Constant.MANAGE.equals(user.getStatus()) || Constant.DEVELOPER.equals(user.getStatus())) {
                         return "manage";
-                    } else if (user.getStatus().equals("2")) {
+                    } else if (Constant.STAFF.equals(user.getStatus())) {
                         return "staff";
                     }
                 }
@@ -84,12 +93,35 @@ public class LoginAction extends BaseAction {
         //首先获取 userID, 然后根据 userId 获取个人数据
         String userId = ActionContext.getContext().getSession().get("userId").toString();
         logger.debug("get userId from session  userId:" + userId);
-        if (StrKit.isBlank(userId)) return ERROR;
+        if (StrKit.isBlank(userId)) {
+            return ERROR;
+        }
 
         //查询蘑菇大棚
-        mushRoomList = userInfoService.getUserInfoList(userId);
-        ActionContext.getContext().put("mushRoomList", mushRoomList);
+
+        List<Monitor> mushRoomList = userInfoService.getUserInfoList(userId);
+
+        Map mushRoomMaps = new HashMap<>(16);
+        Map mushRoomMap;
+        for (int i = 0; i < mushRoomList.size(); i++) {
+            mushRoomMap = new HashMap<>(16);
+            mushRoomMap.put("mushroomLat", mushRoomList.get(i).getMushroomLat());
+            mushRoomMap.put("mushroomLong", mushRoomList.get(i).getMushroomLong());
+            mushRoomMaps.put("point" + (i + 1), mushRoomMap);
+        }
+
+        JSONArray data = JSONArray.fromObject(mushRoomMaps);
+        System.out.println(data);
+        ActionContext.getContext().getSession().put("mushRoomList", data);
         return SUCCESS;
+    }
+
+    public Logger getLogger() {
+        return logger;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
     }
 
     public UserService getUserService() {
@@ -132,26 +164,6 @@ public class LoginAction extends BaseAction {
         this.userList = userList;
     }
 
-    public Logger getLogger() {
-        return logger;
-    }
-
-    public static long getSerialversionuid() {
-        return serialVersionUID;
-    }
-
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
-
-    public List<Monitor> getMushRoomList() {
-        return mushRoomList;
-    }
-
-    public void setMushRoomList(List<Monitor> mushRoomList) {
-        this.mushRoomList = mushRoomList;
-    }
-
     public UserInfoService getUserInfoService() {
         return userInfoService;
     }
@@ -169,7 +181,7 @@ public class LoginAction extends BaseAction {
                 ", userPwd='" + userPwd + '\'' +
                 ", userList=" + userList +
                 ", userInfoService=" + userInfoService +
-                ", mushRoomList=" + mushRoomList +
                 '}';
     }
+
 }

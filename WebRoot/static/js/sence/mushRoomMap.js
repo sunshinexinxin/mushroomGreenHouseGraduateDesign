@@ -4,32 +4,46 @@
 
 // 百度地图API功能
 window.onload = function () {
-    // var data = document.getElementById('mushRoomList').value;
-    var data = null;
-    $(document).ready(function () {
-
-        var result1 = $("#mushRoomList").val();
-        alert("result1 = " + result1);
-    });
 
     var map = new BMap.Map("allmap");    // 创建Map实例
-    var point1 = new BMap.Point(114.198535, 38.857697);
-    var point2 = new BMap.Point(114.199146, 38.857697);
-    var point3 = new BMap.Point(114.198535, 38.857402);
-    map.centerAndZoom(point1, 18);  // 初始化地图,设置中心点坐标和地图级别
+    var pointCent = new BMap.Point(114.2009851142, 38.8555280387);  //创建地图中心点位置，写死即可
+    map.centerAndZoom(pointCent, 17);
 
-    map.setCurrentCity("阜平县");          // 设置地图显示的城市 此项是必须设置的
-    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+    $(document).ready(function () {
+        var result = $("#mushRoomList").val();
+        if (result) {
+            var resultJSON = JSON.parse(result);
+            map.setCurrentCity("阜平县");          // 设置地图显示的城市 此项是必须设置的
+            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 
-    addMarker(point1);
-    addMarker(point2);
-    addMarker(point3);
+            var point
+            $.each(resultJSON[0], function (index, value) {
+                console.log("value.mushroomLong=" + value.mushroomLong + ",mushroomLat=" + value.mushroomLat);
+                point = new BMap.Point(value.mushroomLong, value.mushroomLat);
+                addMarker(point);
+            })
+        }
+    });
 
-    创建标注
-    function addMarker(point) {
-        var marker = new BMap.Marker(point);// 创建标注
-        map.addOverlay(marker);// 将标注添加到地图中
-        marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+    //移除地图点
+    function removeMarker(marker) {
+        alert(marker.lat + "\t" + marker.lng);
     }
 
+    //创建标注
+    function addMarker(point) {
+        console.log(point);
+
+        //地图标注icon
+        var myIcon = new BMap.Icon("/mushroomGreenHouseGraduateDesign/static/image/mushroom.ico", new BMap.Size(24, 24));
+        var marker = new BMap.Marker(point, {icon: myIcon});  // 创建标注
+        marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+
+        //创建右键菜单
+        var markerMenu = new BMap.ContextMenu();
+        markerMenu.addItem(new BMap.MenuItem('查看详情', removeMarker.bind(marker)));
+        map.addOverlay(marker);// 将标注添加到地图中
+
+        marker.addContextMenu(markerMenu);
+    }
 }
