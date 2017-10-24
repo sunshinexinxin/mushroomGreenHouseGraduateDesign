@@ -6,6 +6,7 @@ import com.hbkd.hyx.app.sence.bean.Monitor;
 import com.hbkd.hyx.app.sence.service.UserInfoService;
 import com.hbkd.hyx.core.mvc.BaseAction;
 import com.hbkd.hyx.tool.Constant;
+import com.hbkd.hyx.tool.Md5Utils;
 import com.hbkd.hyx.tool.StrKit;
 import com.opensymphony.xwork2.ActionContext;
 import net.sf.json.JSONArray;
@@ -55,21 +56,29 @@ public class LoginAction extends BaseAction {
             user = userService.getUserById(userName);
             logger.info("后台数据：" + user);
             if (user != null) {
-                if (user.getUserPsd().equals(userPwd)) {
-                    try {
-                        //设置session.
-                        ActionContext.getContext().getSession().put("userName", user.getUserName());
-                        ActionContext.getContext().getSession().put("userId", user.getUserId());
-                        ActionContext.getContext().getSession().put("userBean", user);
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                if (userPwd != null) {
+                    if (user.getUserPsd().equals(Md5Utils.MD5Encode(userPwd))) {
+                        try {
+                            //设置session.
+                            ActionContext.getContext().getSession().put("userName", user.getUserName());
+                            ActionContext.getContext().getSession().put("userId", user.getUserId());
+                            ActionContext.getContext().getSession().put("userBean", user);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        if (Constant.MANAGE.equals(user.getStatus()) || Constant.DEVELOPER.equals(user.getStatus())) {
+                            return "manage";
+                        } else if (Constant.STAFF.equals(user.getStatus())) {
+                            return "staff";
+                        }
+                    } else {
+                        logger.info("密码输入错误！");
                     }
-                    if (Constant.MANAGE.equals(user.getStatus()) || Constant.DEVELOPER.equals(user.getStatus())) {
-                        return "manage";
-                    } else if (Constant.STAFF.equals(user.getStatus())) {
-                        return "staff";
-                    }
+                } else {
+                    logger.info("请输入密码！");
                 }
+            } else {
+                logger.info("用户名错误！");
             }
         } catch (Exception e) {
             e.printStackTrace();
