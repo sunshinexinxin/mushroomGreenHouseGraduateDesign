@@ -10,19 +10,19 @@
 <head>
     <meta charset="utf-8"/>
     <title>蘑菇大棚监控系统</title>
-    <link rel="shortcut icon" href="${pageContext.request.contextPath}/mushroomGreenHouseGraduateDesign/static/image/favicon.ico"/>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/mushroomGreenHouseGraduateDesign/static/main/Styles/admin-all.css"/>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/mushroomGreenHouseGraduateDesign/static/main/Styles/base.css"/>
+    <link rel="shortcut icon" href="/mushroomGreenHouseGraduateDesign/static/image/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/Styles/admin-all.css"/>
+    <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/Styles/base.css"/>
     <link rel="stylesheet" type="text/css"
-          href="${pageContext.request.contextPath}/mushroomGreenHouseGraduateDesign/static/main/Styles/bootstrap.min.css"/>
+          href="/mushroomGreenHouseGraduateDesign/static/main/Styles/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css"
-          href="${pageContext.request.contextPath}/mushroomGreenHouseGraduateDesign/static/main/Styles/ui-lightness/jquery-ui-1.8.22.custom.css"/>
+          href="/mushroomGreenHouseGraduateDesign/static/main/Styles/ui-lightness/jquery-ui-1.8.22.custom.css"/>
 
-    <script type="text/javascript" src="${pageContext.request.contextPath}/mushroomGreenHouseGraduateDesign/static/main/Scripts/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/jquery-1.7.2.js"></script>
     <script type="text/javascript"
-            src="${pageContext.request.contextPath}/mushroomGreenHouseGraduateDesign/static/main/Scripts/jquery-ui-1.8.22.custom.min.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/mushroomGreenHouseGraduateDesign/static/main/Scripts/index.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/mushroomGreenHouseGraduateDesign/static/js/sence/mainManager.js"></script>
+            src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/jquery-ui-1.8.22.custom.min.js"></script>
+    <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/index.js"></script>
+    <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/js/sence/mainManager.js"></script>
 
 
     <script type="text/javascript">
@@ -295,15 +295,15 @@
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="${pageContext.request.contextPath}/mushroomGreenHouseGraduateDesign/static/main/Template/formstyle.html">修改个人信息</a>
+                                              href="/mushroomGreenHouseGraduateDesign/static/main/Template/formstyle.html">修改个人信息</a>
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="${pageContext.request.contextPath}/mushroomGreenHouseGraduateDesign/static/main/Template/formstyle.html">删除个人信息</a>
+                                              href="/mushroomGreenHouseGraduateDesign/static/main/Template/formstyle.html">删除个人信息</a>
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="${pageContext.request.contextPath}/mushroomGreenHouseGraduateDesign/static/main/Template/formstyle.html">预留菜单</a>
+                                              href="/mushroomGreenHouseGraduateDesign/static/main/Template/formstyle.html">预留菜单</a>
                     </li>
                 </ul>
             </div>
