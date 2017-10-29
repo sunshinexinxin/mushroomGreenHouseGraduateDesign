@@ -1,3 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%-- Struts2标签引入 --%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -20,7 +27,7 @@
     <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
     <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel='stylesheet' type='text/css' href='/mushroomGreenHouseGraduateDesign/static/login/css/boostrap.css'/>
+    <!--<link rel='stylesheet' type='text/css' href='/mushroomGreenHouseGraduateDesign/static/login/css/boostrap.css'/>-->
     <script src="/mushroomGreenHouseGraduateDesign/static/login/js/jquery.min.js"></script>
 
     <script>
@@ -31,7 +38,8 @@
 
     </script>
 </head>
-<body onLoad="document.forms.form.userName.focus()">
+<!--<body onLoad="document.forms.form.userName.focus()">-->
+<body>
 <!--sign up form start here-->
 <div class="app">
     <div class="top-bar">
@@ -65,11 +73,15 @@
         </h3>
     </div>
     <br><br><br>
-    <form action="/mushroomGreenHouseGraduateDesign/user/show.action" method="post" name="form">
-        <input type="text" name="userName" value="" placeholder="用户名"/>
-        <input type="password" name="userPwd" value="" placeholder="密&nbsp码"/><br/>
-        <input type="submit" value="登录" class='btn btn-default btn-lg'/>
-    </form>
+    <span>
+        <form action="/mushroomGreenHouseGraduateDesign/user/login.action" method="post">
+            <input type="text" name="userName" id="userName" value="" placeholder="用户名"/>
+            <input type="password" name="userPwd" id="userPwd" value="" placeholder="密&nbsp码"/><br/>
+            <input type="submit" value="登录" class='btn btn-default btn-lg' id="login"/>
+            <!--<button class="btn btn-default btn-lg" id="login">登录</button>-->
+            <input type="hidden" id="data" value="${resuData.getStatus()}"/>
+        </form>
+    </span>
     <p>
         Copyright @ 2018 Graduation design
         <br>
@@ -77,5 +89,6 @@
     </p>
 </div>
 <!--sign up form end here-->
+<script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/js/login/login.js"></script>
 </body>
 </html>

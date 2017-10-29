@@ -67,14 +67,14 @@
                 <div class="span8">
                     <label>岗位：</label>
                     <span class="detail-text" id="detail-text">
-                        <script type="text/javascript" >
-                            if(${userBean.getStatus()}==0){
-                                document.getElementById("detail-text").innerHTML="开发测试岗";
-                            }else if(${userBean.getStatus()}==1)
-                            {
+                        <script type="text/javascript">
+                            if (${userBean.getStatus()}==0){
+                                document.getElementById("detail-text").innerHTML = "开发测试岗";
+                            }else
+                            if (${userBean.getStatus()}==1){
                                 document.getElementById("detail-text").innerHTML = "管理员";
-                            }else if(${userBean.getStatus()}==2)
-                            {
+                            }else
+                            if (${userBean.getStatus()}==2){
                                 document.getElementById("detail-text").innerHTML = "普通用户";
                             }
                         </script>
@@ -126,9 +126,9 @@
                             <td><s:property value="mushroomLong"/></td>
                             <td><s:property value="mushroomLat"/></td>
                             <td><s:property value="delFlag"/></td>
-                            <%--<td><s:property value="memo"/></td>--%>
+                                <%--<td><s:property value="memo"/></td>--%>
                             <td><s:property value="ctime"/></td>
-                            <td> <a href="#" value=""/>查看</td>
+                            <td><a href="#" value=""/>查看</td>
                         </tr>
                     </s:iterator>
                     </tbody>

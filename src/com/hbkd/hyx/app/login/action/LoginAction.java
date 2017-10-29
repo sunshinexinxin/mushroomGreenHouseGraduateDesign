@@ -1,15 +1,16 @@
 package com.hbkd.hyx.app.login.action;
 
+import com.hbkd.hyx.app.login.bean.ResuData;
 import com.hbkd.hyx.app.login.bean.User;
 import com.hbkd.hyx.app.login.service.UserService;
 import com.hbkd.hyx.app.sence.bean.Monitor;
 import com.hbkd.hyx.app.sence.service.UserInfoService;
 import com.hbkd.hyx.core.mvc.BaseAction;
-import com.hbkd.hyx.tool.Constant;
 import com.hbkd.hyx.tool.Md5Utils;
 import com.hbkd.hyx.tool.StrKit;
 import com.opensymphony.xwork2.ActionContext;
 import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
 
 import java.util.HashMap;
@@ -50,11 +51,15 @@ public class LoginAction extends BaseAction {
     /**
      * 登录方法
      */
+    private JSONObject json = new JSONObject();
+    private ResuData resuData = new ResuData();
+
     public String login() {
         try {
             logger.info("前台数据：用户名：" + userName + "\t密码：" + userPwd);
             user = userService.getUserById(userName);
             logger.info("后台数据：" + user);
+            response.setHeader("Content-type", "text/html;charset=UTF-8");
             if (user != null) {
                 if (userPwd != null) {
                     if (user.getUserPsd().equals(Md5Utils.MD5Encode(userPwd))) {
@@ -63,26 +68,30 @@ public class LoginAction extends BaseAction {
                             ActionContext.getContext().getSession().put("userName", user.getUserName());
                             ActionContext.getContext().getSession().put("userId", user.getUserId());
                             ActionContext.getContext().getSession().put("userBean", user);
+                            logger.info("登录成功！");
+                            return SUCCESS;
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
-                        if (Constant.MANAGE.equals(user.getStatus()) || Constant.DEVELOPER.equals(user.getStatus())) {
-                            return "manage";
-                        } else if (Constant.STAFF.equals(user.getStatus())) {
-                            return "staff";
-                        }
                     } else {
                         logger.info("密码输入错误！");
+                        resuData.setStatus("0");
+                        resuData.setMessage("密码错误");
                     }
                 } else {
-                    logger.info("请输入密码！");
+                    logger.info("用户密码出错，请联系管理员！");
+                    resuData.setStatus("2");
+                    resuData.setMessage("用户密码出错，请联系管理员！");
                 }
             } else {
                 logger.info("用户名错误！");
+                resuData.setStatus("1");
+                resuData.setMessage("用户名错误");
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+        ActionContext.getContext().getSession().put("resuData", resuData);
         return ERROR;
     }
 
@@ -181,6 +190,14 @@ public class LoginAction extends BaseAction {
         this.userInfoService = userInfoService;
     }
 
+    public JSONObject getJson() {
+        return json;
+    }
+
+    public void setJson(JSONObject json) {
+        this.json = json;
+    }
+
     @Override
     public String toString() {
         return "LoginAction{" +
@@ -190,7 +207,7 @@ public class LoginAction extends BaseAction {
                 ", userPwd='" + userPwd + '\'' +
                 ", userList=" + userList +
                 ", userInfoService=" + userInfoService +
+                ", json=" + json +
                 '}';
     }
-
 }

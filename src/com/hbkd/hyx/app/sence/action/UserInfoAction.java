@@ -28,7 +28,9 @@ public class UserInfoAction extends BaseAction {
         userId = ActionContext.getContext().getSession().get("userId").toString();
         logger.debug("get userId from session  userId:" + userId);
 
-        if (StrKit.isBlank(userId)) return ERROR;
+        if (StrKit.isBlank(userId)) {
+            return ERROR;
+        }
         try {
 //            userBean = userInfoService.getUserInfoById(userId);
 //            ActionContext.getContext().getSession().put("userSession", userBean);

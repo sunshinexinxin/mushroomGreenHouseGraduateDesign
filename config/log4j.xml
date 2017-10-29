@@ -15,7 +15,7 @@
     </appender>
 
     <appender name="DEBUG" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="/usr/local/apache-tomcat-7.0.75/log4j/mushroomGHGD/debug.log"/>
+        <param name="File" value="/usr/local/tomcat7/log4j/mushroomGHGD/debug.log"/>
         <param name="Append" value="true"/>
         <param name="encoding" value="UTF-8"/>
         <param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
@@ -30,7 +30,7 @@
     </appender>
 
     <appender name="INFO" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="/usr/local/apache-tomcat-7.0.75/log4j/mushroomGHGD/info.log"/>
+        <param name="File" value="/usr/local/tomcat7/log4j/mushroomGHGD/info.log"/>
         <param name="Append" value="true"/>
         <param name="encoding" value="UTF-8"/>
         <param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
@@ -45,7 +45,7 @@
     </appender>
 
     <appender name="WARN" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="/usr/local/apache-tomcat-7.0.75/log4j/mushroomGHGD/warn.log"/>
+        <param name="File" value="/usr/local/tomcat7/log4j/mushroomGHGD/warn.log"/>
         <param name="Append" value="true"/>
         <param name="encoding" value="UTF-8"/>
         <param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
@@ -60,7 +60,7 @@
     </appender>
 
     <appender name="ERROR" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="/usr/local/apache-tomcat-7.0.75/log4j/mushroomGHGD/error.log"/>
+        <param name="File" value="/usr/local/tomcat7/log4j/mushroomGHGD/error.log"/>
         <param name="Append" value="true"/>
         <param name="encoding" value="UTF-8"/>
         <param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
