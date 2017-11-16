@@ -48,7 +48,7 @@
 		<property name="userDao" ref="userDao" />
 	</bean>
 	<!-- 定义Action Bean -->
-	<bean id="loginAction" class="com.hbkd.hyx.app.login.action.LoginAction"
+	<bean id="com.hbkd.hyx.app.login.action.LoginAction" class="com.hbkd.hyx.app.login.action.LoginAction"
 		scope="prototype">
 		<property name="userService" ref="userService" />
 		<property name="userInfoService" ref="userInfoService"></property>

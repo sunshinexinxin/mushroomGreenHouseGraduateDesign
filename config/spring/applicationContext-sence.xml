@@ -11,7 +11,7 @@
         <property name="userInfoDao" ref="userInfoDao"></property>
     </bean>
     <!-- 个人中心 -->
-    <bean id="userInfoAction" class="com.hbkd.hyx.app.sence.action.UserInfoAction"
+    <bean id="com.hbkd.hyx.app.sence.action.UserInfoAction" class="com.hbkd.hyx.app.sence.action.UserInfoAction"
           scope="prototype">
         <property name="userInfoService" ref="userInfoService"></property>
     </bean>

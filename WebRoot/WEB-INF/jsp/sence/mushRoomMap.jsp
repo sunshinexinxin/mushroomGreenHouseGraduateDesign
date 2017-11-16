@@ -34,10 +34,8 @@
 </head>
 <body>
 <div id="allmap">
-
+    <%--<input type="hidden" id="resuData" value=${resuData}/>--%>
 </div>
-<input type="hidden" id="mushRoomList" value='${mushRoomList}' />
-<%--<input type="hidden" id="mushRoomList" value=""/>--%>
 <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/js/sence/mushRoomMap.js"></script>
 </body>
 </html>

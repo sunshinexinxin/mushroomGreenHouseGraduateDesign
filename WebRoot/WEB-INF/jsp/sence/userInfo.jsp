@@ -70,11 +70,9 @@
                         <script type="text/javascript">
                             if (${userBean.getStatus()}==0){
                                 document.getElementById("detail-text").innerHTML = "开发测试岗";
-                            }else
-                            if (${userBean.getStatus()}==1){
+                            }else if (${userBean.getStatus()}==1) {
                                 document.getElementById("detail-text").innerHTML = "管理员";
-                            }else
-                            if (${userBean.getStatus()}==2){
+                            } else if (${userBean.getStatus()}==2) {
                                 document.getElementById("detail-text").innerHTML = "普通用户";
                             }
                         </script>
@@ -95,11 +93,11 @@
             <h3>
                 大棚信息
             </h3>
+
             <div>
-                <table class="table table-bordered table-hover">
+                <table class="table table-bordered table-hover" id="table">
                     <thead>
                     <tr bgcolor=#C1CDCD>
-                        <th>编号</th>
                         <th>大棚编号</th>
                         <th>中文名称</th>
                         <th>负责人ID</th>
@@ -108,30 +106,10 @@
                         <th>大棚经度</th>
                         <th>大棚纬度</th>
                         <th>大棚状态</th>
-                        <%--<th>备注</th>--%>
                         <th>创建时间</th>
                         <th>操作</th>
                     </tr>
                     </thead>
-
-                    <tbody>
-                    <s:iterator value="userInfoList" status="userInfo">
-                        <tr class="success">
-                            <td><s:property value="idno"/></td>
-                            <td><s:property value="mushroomPointid"/></td>
-                            <td><s:property value="mushroomName"/></td>
-                            <td><s:property value="userId"/></td>
-                            <td><s:property value="mushroomDesc"/></td>
-                            <td><s:property value="mushroomStatus"/></td>
-                            <td><s:property value="mushroomLong"/></td>
-                            <td><s:property value="mushroomLat"/></td>
-                            <td><s:property value="delFlag"/></td>
-                                <%--<td><s:property value="memo"/></td>--%>
-                            <td><s:property value="ctime"/></td>
-                            <td><a href="#" value=""/>查看</td>
-                        </tr>
-                    </s:iterator>
-                    </tbody>
                 </table>
             </div>
         </div>
@@ -141,6 +119,8 @@
 <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/userInfo/js/jquery-1.8.1.min.js"></script>
 <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/userInfo/js/bui-min.js"></script>
 <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/userInfo/js/config-min.js"></script>
+
+<script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/js/sence/userInfo.js"></script>
 <body>
 </html>  
 

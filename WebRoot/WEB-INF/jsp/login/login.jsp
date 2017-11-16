@@ -79,7 +79,7 @@
             <input type="password" name="userPwd" id="userPwd" value="" placeholder="密&nbsp码"/><br/>
             <input type="submit" value="登录" class='btn btn-default btn-lg' id="login"/>
             <!--<button class="btn btn-default btn-lg" id="login">登录</button>-->
-            <input type="hidden" id="data" value="${resuData.getStatus()}"/>
+            <%--<input type="hidden" id="data" value="${resuData.getStatus()}"/>--%>
         </form>
     </span>
     <p>

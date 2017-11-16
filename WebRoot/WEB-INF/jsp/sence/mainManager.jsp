@@ -19,34 +19,14 @@
           href="/mushroomGreenHouseGraduateDesign/static/main/Styles/ui-lightness/jquery-ui-1.8.22.custom.css"/>
 
     <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/jquery-1.7.2.js"></script>
+
     <script type="text/javascript"
             src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/jquery-ui-1.8.22.custom.min.js"></script>
     <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/index.js"></script>
     <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/js/sence/mainManager.js"></script>
 
-
-    <script type="text/javascript">
-        function fireEvent(element, event) {
-            if (document.createEventObject) {
-                // dispatch for IE
-                var evt = document.createEventObject();
-                return element.fireEvent('on' + event, evt)
-            }
-            else {
-                // dispatch for firefox + others
-                var evt = document.createEvent("HTMLEvents");
-                evt.initEvent(event, true, true); // event type,bubbling,cancelable
-                return !element.dispatchEvent(evt);
-            }
-        }
-
-        function _click() {
-            fireEvent(document.getElementById('123'), 'click');
-        }
-    </script>
-
 </head>
-<body onload="_click();">
+<body>
 
 <div class="warp">
     <!--头部开始-->
@@ -54,8 +34,10 @@
         <div class="top-menu">
             <ul class="top-menu-nav">
                 <li>
-                    <a target="Conframe" href="/mushroomGreenHouseGraduateDesign/user/mushRoomMap.action" id="homePage"
-                       name="homePage">首页</a>
+                    <a target="Conframe" href="/mushroomGreenHouseGraduateDesign/user/mushRoomMapPage.action"
+                       id="homePage" name="homePage">
+                        <p>首页</p>
+                    </a>
                 </li>
                 <li>
                     <a href="#">信息发布<i class="tip-up"></i>
@@ -187,7 +169,7 @@
         </div>
         <div class="top-nav">
             欢迎您，${userName}！&nbsp;&nbsp;
-            <a href="/mushroomGreenHouseGraduateDesign/user/userInfo.action" target="Conframe">个人中心</a> |
+            <a href="/mushroomGreenHouseGraduateDesign/user/userInfoPage.action" target="Conframe">个人中心</a> |
             <a href="/mushroomGreenHouseGraduateDesign/user/logout.action">安全退出</a>
         </div>
     </div>
@@ -203,11 +185,13 @@
                 <ul class="kid">
                     <li>
                         <b class="tip"></b>
-                        <a target="Conframe" href="/mushroomGreenHouseGraduateDesign/static/main/Template/echarts_bingtu.jsp">饼图统计</a>
+                        <a target="Conframe"
+                           href="/mushroomGreenHouseGraduateDesign/static/main/Template/echarts_bingtu.action">饼图统计</a>
                     </li>
                     <li>
                         <b class="tip"></b>
-                        <a target="Conframe" href="/mushroomGreenHouseGraduateDesign/static/main/Template/echarts_duiji.jsp">统计分析</a>
+                        <a target="Conframe"
+                           href="/mushroomGreenHouseGraduateDesign/static/main/Template/echarts_duiji.jsp">统计分析</a>
                     </li>
                     <li>
                         <b class="tip"></b>
@@ -322,7 +306,7 @@
 
     </div>
     <div class="Conframe">
-        <iframe name="Conframe" id="Conframe"></iframe>
+        <iframe name="Conframe" id="Conframe" src=""></iframe>
     </div>
     <!--右边框架结束-->
     <!--底部开始-->
@@ -331,6 +315,8 @@
     </div>
     <!--底部结束-->
 </div>
-<%--<script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/js/sence/mainManager.js"></script>--%>
+
+<script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/js/sence/mainManager.js"></script>
+
 </body>
 </html>

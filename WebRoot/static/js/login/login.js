@@ -2,6 +2,7 @@
  * Created by anke on 2017/10/26.
  */
 window.onload = function () {
+    $("#userName").focus();
     $("#login").on("click", function () {
         if ($("#userName").val().trim() == "") {
             alert("用户名不能为空！");

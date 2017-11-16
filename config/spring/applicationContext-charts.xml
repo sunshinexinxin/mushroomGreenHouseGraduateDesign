@@ -10,7 +10,7 @@
     <bean id="chartsService" class="com.hbkd.hyx.app.sence.service.impl.ChartsCollectionServicImpl">
         <property name="chartsCollectionDao" ref="chartsCollectionDao"></property>
     </bean>
-    <bean id="chartsCollectionAction" class="com.hbkd.hyx.app.sence.action.ChartsCollectionAction"
+    <bean id="com.hbkd.hyx.app.sence.action.ChartsCollectionAction" class="com.hbkd.hyx.app.sence.action.ChartsCollectionAction"
           scope="prototype">
         <property name="chartsService" ref="chartsService"></property>
     </bean>
