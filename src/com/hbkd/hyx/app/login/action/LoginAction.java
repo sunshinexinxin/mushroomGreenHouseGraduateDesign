@@ -9,11 +9,10 @@ import com.hbkd.hyx.core.mvc.BaseAction;
 import com.hbkd.hyx.tool.Md5Utils;
 import com.hbkd.hyx.tool.StrKit;
 import com.opensymphony.xwork2.ActionContext;
-import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -46,14 +45,14 @@ public class LoginAction extends BaseAction {
      * 复用类，根据用户 id 获取地图经纬度
      */
     private UserInfoService userInfoService;
-//    private List<Monitor> mushRoomList = null;
+
+
+    private JSONObject json = new JSONObject();
+    private ResuData resuData = new ResuData();
 
     /**
      * 登录方法
      */
-    private JSONObject json = new JSONObject();
-    private ResuData resuData = new ResuData();
-
     public String login() {
         try {
             logger.info("前台数据：用户名：" + userName + "\t密码：" + userPwd);
@@ -68,69 +67,57 @@ public class LoginAction extends BaseAction {
                             ActionContext.getContext().getSession().put("userName", user.getUserName());
                             ActionContext.getContext().getSession().put("userId", user.getUserId());
                             ActionContext.getContext().getSession().put("userBean", user);
-                            logger.info("登录成功！");
+                            logger.info(user.getUserName() + " 登录成功！");
                             return SUCCESS;
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
                     } else {
                         logger.info("密码输入错误！");
-                        resuData.setStatus("0");
-                        resuData.setMessage("密码错误");
                     }
                 } else {
                     logger.info("用户密码出错，请联系管理员！");
-                    resuData.setStatus("2");
-                    resuData.setMessage("用户密码出错，请联系管理员！");
                 }
             } else {
                 logger.info("用户名错误！");
-                resuData.setStatus("1");
-                resuData.setMessage("用户名错误");
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        ActionContext.getContext().getSession().put("resuData", resuData);
         return ERROR;
     }
 
-
-    /**
-     * 退出方法
-     */
-    public String logout() {
-        return SUCCESS;
-    }
 
     /***地图首页方法
      *
      * @return
      */
+    private Map<String, Object> rsJsonData;
+
     public String mushRoomMap() {
         //首先获取 userID, 然后根据 userId 获取个人数据
         String userId = ActionContext.getContext().getSession().get("userId").toString();
-        logger.debug("get userId from session  userId:" + userId);
+        logger.info("从session获取userId:" + userId);
         if (StrKit.isBlank(userId)) {
             return ERROR;
         }
-
         //查询蘑菇大棚
-
         List<Monitor> mushRoomList = userInfoService.getUserInfoList(userId);
 
-        Map mushRoomMaps = new HashMap<>(16);
-        Map mushRoomMap;
+        ResuData rs = new ResuData();
+        rs.setStatus("200");
+        rs.setMessage("成功");
+        List resuList = new ArrayList();
         for (int i = 0; i < mushRoomList.size(); i++) {
-            mushRoomMap = new HashMap<>(16);
-            mushRoomMap.put("mushroomLat", mushRoomList.get(i).getMushroomLat());
-            mushRoomMap.put("mushroomLong", mushRoomList.get(i).getMushroomLong());
-            mushRoomMaps.put("point" + (i + 1), mushRoomMap);
+            List resuLists = new ArrayList();
+            resuLists.add(mushRoomList.get(i).getMushroomLat());
+            resuLists.add(mushRoomList.get(i).getMushroomLong());
+            resuList.add(resuLists);
         }
+        rs.setData(resuList.toString());
+        rsJsonData = JSONObject.fromObject(rs);
+        System.out.println("rsJsonData\t" + rsJsonData);
 
-        JSONArray data = JSONArray.fromObject(mushRoomMaps);
-        System.out.println(data);
-        ActionContext.getContext().getSession().put("mushRoomList", data);
         return SUCCESS;
     }
 
@@ -198,6 +185,22 @@ public class LoginAction extends BaseAction {
         this.json = json;
     }
 
+    public ResuData getResuData() {
+        return resuData;
+    }
+
+    public void setResuData(ResuData resuData) {
+        this.resuData = resuData;
+    }
+
+    public Map<String, Object> getRsJsonData() {
+        return rsJsonData;
+    }
+
+    public void setRsJsonData(Map<String, Object> rsJsonData) {
+        this.rsJsonData = rsJsonData;
+    }
+
     @Override
     public String toString() {
         return "LoginAction{" +
@@ -208,6 +211,9 @@ public class LoginAction extends BaseAction {
                 ", userList=" + userList +
                 ", userInfoService=" + userInfoService +
                 ", json=" + json +
+                ", resuData=" + resuData +
+                ", rsJsonData=" + rsJsonData +
                 '}';
     }
+
 }

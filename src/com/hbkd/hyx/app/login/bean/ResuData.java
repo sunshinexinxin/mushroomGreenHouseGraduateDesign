@@ -4,9 +4,9 @@ package com.hbkd.hyx.app.login.bean;
  * Created by anke on 2017/10/28.
  */
 public class ResuData {
-    private String status;
-    private String message;
-    private User data;
+    private String status = "200";
+    private String message = "成功";
+    private Object data;
 
     public String getStatus() {
         return status;
@@ -24,11 +24,11 @@ public class ResuData {
         this.message = message;
     }
 
-    public User getData() {
+    public Object getData() {
         return data;
     }
 
-    public void setData(User data) {
+    public void setData(Object data) {
         this.data = data;
     }
 

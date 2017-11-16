@@ -20,6 +20,14 @@ public class ChartsCollectionAction extends BaseAction {
     private List<ChartsCollectionBean> tempWetList;
 //    private List<String> tempWetList;
 
+
+    /**
+     * 饼图统计 返回数据
+     */
+    public String binTuData() {
+        return SUCCESS;
+    }
+
     /***温度湿度图表
      *
      * @return
