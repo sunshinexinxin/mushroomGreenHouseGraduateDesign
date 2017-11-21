@@ -41,7 +41,7 @@ for (var i = 1; i < 20000; i++) {
 
 option = {
     title: {
-        text: '贷款主要用途分布',
+        text: '大棚作物分布',
         subtext: '饼图',
         x: 'center'
     },
@@ -52,7 +52,7 @@ option = {
     legend: {
         orient: 'vertical',
         left: 'left',
-        data: ['畜牧服务', '农业服务', '市场零售', '种植加工', '农副产品加工']
+        data: ['花卉', '农业服务', '市场零售', '种植加工', '农副产品加工']
     },
     series: [
         {
