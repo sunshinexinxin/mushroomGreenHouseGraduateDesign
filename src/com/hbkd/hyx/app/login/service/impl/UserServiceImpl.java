@@ -4,24 +4,29 @@ import com.hbkd.hyx.app.login.bean.User;
 import com.hbkd.hyx.app.login.dao.UserDao;
 import com.hbkd.hyx.app.login.service.UserService;
 
-//import java.util.List;
-
-
+/**
+ * @author anke
+ */
 public class UserServiceImpl implements UserService {
 
-	// 注入UserDao 该变量名称必须与配置文件中定义的<bean id ="userDao"> 相同
-	private UserDao userDao;
+    private UserDao userDao;
 
-	public User getUserById(String id) {
-		return userDao.getUserById(id);
-	}
+    @Override
+    public User getUserByName(String id) {
+        return userDao.getUserByName(id);
+    }
 
-	public UserDao getUserDao() {
-		return userDao;
-	}
+    @Override
+    public Integer getUserCountByName(String name) {
+        return userDao.getUserCountByName(name);
+    }
 
-	public void setUserDao(UserDao userDao) {
-		this.userDao = userDao;
-	}
+    public UserDao getUserDao() {
+        return userDao;
+    }
+
+    public void setUserDao(UserDao userDao) {
+        this.userDao = userDao;
+    }
 
 }

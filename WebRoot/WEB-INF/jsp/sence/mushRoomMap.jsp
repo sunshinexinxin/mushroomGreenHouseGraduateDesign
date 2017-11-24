@@ -13,11 +13,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
     <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/jquery-ui-1.8.22.custom.min.js"></script>
-
-    <script type="text/javascript"
-            src="http://api.map.baidu.com/api?v=2.0&ak=bYpmt0vDGAMytit9flwnIH6G1hhiNckh"></script>
+    <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/jquery-ui-1.8.22.custom.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=bYpmt0vDGAMytit9flwnIH6G1hhiNckh"></script>
 
     <%--<title>地图展示</title>--%>
 

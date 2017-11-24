@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BackStageManagement">
+    <!--系统后台管理模块-添加系统用户-->
+    <resultMap id="usersList" type="User">
+        <result column="user_id" property="userId"/>
+        <result column="user_name" property="userName"/>
+        <result column="user_age" property="userAge"/>
+        <result column="user_psd" property="userPsd"/>
+        <result column="user_phone" property="userPhone"/>
+        <result column="user_add" property="userAdd"/>
+        <result column="status" property="status"/>
+        <result column="del_flag" property="delFlag"/>
+        <result column="memo" property="memo"/>
+        <result column="ctime" property="ctime"/>
+    </resultMap>
+
+    <!--系统后台管理模块-查询用户列表-->
+    <select id="getUsersByUserID" resultMap="usersList">
+        select
+            user_id,
+            user_name,
+            user_age,
+            user_psd,
+            user_phone,
+            user_add,
+            status,
+            del_flag,
+            memo,
+            ctime
+        from tb_mrgh_users
+        where 1=1
+            and user_id != #{userId,jdbcType=NVARCHAR}
+            and status &lt;= #{status,jdbcType=NVARCHAR}
+    </select>
+
+    <!--添加系统用户 -->
+    <select id="addUsers" resultMap="usersList">
+        insert
+        into tb_mrgh_users (user_name,user_age,user_psd,user_phone,user_add,status,memo,ctime) values
+        (#{userName,jdbcType=NVARCHAR},#{userAge,jdbcType=NVARCHAR},#{userPsd,jdbcType=NVARCHAR},
+        #{userPhone,jdbcType=NVARCHAR},#{userAdd,jdbcType=NVARCHAR},#{status,jdbcType=NVARCHAR},
+        #{memo,jdbcType=NVARCHAR},#{ctime,jdbcType=NVARCHAR});
+    </select>
+
+    <!--删除系统用户 -->
+    <select id="deleteUsers" resultMap="usersList">
+        delete from tb_mrgh_users where user_id = #{userId,jdbcType=NVARCHAR}
+    </select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

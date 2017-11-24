@@ -56,9 +56,8 @@ public class LoginAction extends BaseAction {
     public String login() {
         try {
             logger.info("前台数据：用户名：" + userName + "\t密码：" + userPwd);
-            user = userService.getUserById(userName);
+            user = userService.getUserByName(userName);
             logger.info("后台数据：" + user);
-            response.setHeader("Content-type", "text/html;charset=UTF-8");
             if (user != null) {
                 if (userPwd != null) {
                     if (user.getUserPsd().equals(Md5Utils.MD5Encode(userPwd))) {

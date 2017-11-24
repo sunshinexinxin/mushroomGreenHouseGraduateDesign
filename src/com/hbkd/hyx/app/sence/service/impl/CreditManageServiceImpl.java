@@ -10,6 +10,7 @@ public class CreditManageServiceImpl implements CreditManageService {
 	
 	private CreditManageDao creditManageDao;
 
+	@Override
 	public Object getCreditManage(Map<String, String> map) {
 		return creditManageDao.getCreditManage(map);
 	}

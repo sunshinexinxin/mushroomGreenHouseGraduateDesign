@@ -21,5 +21,6 @@
 		<mapper	resource="com/hbkd/hyx/app/sence/dao/impl/CreditListSqlMap.ibatis.xml" />
 		<mapper	resource="com/hbkd/hyx/app/sence/dao/impl/CreditManageSqlMap.ibatis.xml" />
 		<mapper	resource="com/hbkd/hyx/app/sence/dao/impl/ChartsCollectionSqlMap.ibatis.xml" />
+		<mapper	resource="com/hbkd/hyx/app/sence/dao/impl/BackStageManagementSqlMap.ibatis.xml" />
 	</mappers>
 </configuration>

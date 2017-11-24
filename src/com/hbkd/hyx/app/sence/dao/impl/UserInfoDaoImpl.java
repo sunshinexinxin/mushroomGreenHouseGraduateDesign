@@ -8,6 +8,9 @@ import org.mybatis.spring.support.SqlSessionDaoSupport;
 
 import java.util.List;
 
+/**
+ * @author anke
+ */
 public class UserInfoDaoImpl extends SqlSessionDaoSupport implements UserInfoDao {
 
     private Logger logger = Logger.getLogger(UserInfoDaoImpl.class);

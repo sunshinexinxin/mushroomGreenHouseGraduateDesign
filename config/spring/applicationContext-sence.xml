@@ -11,43 +11,31 @@
         <property name="userInfoDao" ref="userInfoDao"></property>
     </bean>
     <!-- 个人中心 -->
-    <bean id="com.hbkd.hyx.app.sence.action.UserInfoAction" class="com.hbkd.hyx.app.sence.action.UserInfoAction"
-          scope="prototype">
+    <bean id="com.hbkd.hyx.app.sence.action.UserInfoAction" class="com.hbkd.hyx.app.sence.action.UserInfoAction" scope="prototype">
         <property name="userInfoService" ref="userInfoService"></property>
     </bean>
-    <!--&lt;!&ndash;首页-地图加载&ndash;&gt;-->
-    <!--<bean id="loginAction" class="com.hbkd.hyx.app.login.action.LoginAction"-->
-          <!--scope="prototype">-->
-        <!--<property name="userInfoService" ref="userInfoService"></property>-->
-    <!--</bean>-->
 
     <!-- 管理员-信贷员列表 -->
     <bean id="creditListDao" class="com.hbkd.hyx.app.sence.dao.impl.CreditListDaoImpl">
         <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
     </bean>
-    <bean id="creditListService"
-          class="com.hbkd.hyx.app.sence.service.impl.CreditListServiceImpl">
+    <bean id="creditListService" class="com.hbkd.hyx.app.sence.service.impl.CreditListServiceImpl">
         <property name="creditListDao" ref="creditListDao"></property>
     </bean>
-    <bean id="creditListAction" class="com.hbkd.hyx.app.sence.action.CreditListAction"
-          scope="prototype">
+    <bean id="creditListAction" class="com.hbkd.hyx.app.sence.action.CreditListAction" scope="prototype">
         <property name="creditListService" ref="creditListService"></property>
     </bean>
 
     <!-- 管理员-添加信贷员 -->
-    <bean id="creditManageDao"
-          class="com.hbkd.hyx.app.sence.dao.impl.CreditManageDaoImpl">
+    <bean id="creditManageDao" class="com.hbkd.hyx.app.sence.dao.impl.CreditManageDaoImpl">
         <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
     </bean>
-    <bean id="creditManageService"
-          class="com.hbkd.hyx.app.sence.service.impl.CreditManageServiceImpl">
+    <bean id="creditManageService" class="com.hbkd.hyx.app.sence.service.impl.CreditManageServiceImpl">
         <property name="creditManageDao" ref="creditManageDao"></property>
     </bean>
-    <bean id="creditManageAction" class="com.hbkd.hyx.app.sence.action.CreditManageAction"
-          scope="prototype">
+    <bean id="creditManageAction" class="com.hbkd.hyx.app.sence.action.CreditManageAction" scope="prototype">
         <property name="creditManageService" ref="creditManageService"></property>
     </bean>
-
 
     <!-- 以上三种Bean的配置，在实际项目中应处于相对独立的文件中,在该文件中引入 -->
 

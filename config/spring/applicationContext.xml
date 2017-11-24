@@ -43,8 +43,7 @@
 		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
 	<!-- 定义Service Bean -->
-	<bean id="userService"
-		class="com.hbkd.hyx.app.login.service.impl.UserServiceImpl">
+	<bean id="userService" class="com.hbkd.hyx.app.login.service.impl.UserServiceImpl">
 		<property name="userDao" ref="userDao" />
 	</bean>
 	<!-- 定义Action Bean -->
@@ -60,6 +59,18 @@
 	</bean>
 	<bean id="userInfoService" class="com.hbkd.hyx.app.sence.service.impl.UserInfoServiceImpl">
 		<property name="userInfoDao" ref="userInfoDao"></property>
+	</bean>
+
+	<!-- 系统后台管理-系统用户配置 -->
+	<bean id="backStageManagementDao" class="com.hbkd.hyx.app.sence.dao.impl.BackStageManagementDaoImpl">
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+	</bean>
+	<bean id="backStageManagementService" class="com.hbkd.hyx.app.sence.service.impl.BackStageManagementServiceImpl">
+		<property name="backStageManagementDao" ref="backStageManagementDao"></property>
+	</bean>
+	<bean id="com.hbkd.hyx.app.sence.action.BackStageManagementAction" class="com.hbkd.hyx.app.sence.action.BackStageManagementAction" scope="prototype">
+		<property name="backStageManagementService" ref="backStageManagementService"></property>
+		<property name="userService" ref="userService" />
 	</bean>
 
 	<!-- 以上三种Bean的配置，在实际项目中应处于相对独立的文件中,在该文件中引入 -->

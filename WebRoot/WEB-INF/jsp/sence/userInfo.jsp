@@ -40,43 +40,48 @@
             <h3>基本信息</h3>
             <div class="row detail-row ">
                 <div class="span8">
-                    <label>编号：</label><span class="detail-text">${userBean.getUserId()}</span>
+                    <label>编号：${userBean.getUserId()}
+                    <%--<label>编号：</label><span class="detail-text">${userBean.getUserId()}</span>--%>
                 </div>
                 <div class="span8">
-                    <label>姓名：</label><span class="detail-text">${userBean.getUserName()}</span>
+                    <label>姓名：${userBean.getUserName()}
+                    <%--<label>姓名：</label><span class="detail-text">${userBean.getUserName()}</span>--%>
                 </div>
                 <div class="span8">
-                    <label>年龄：</label><span class="detail-text">${userBean.getUserAge()}</span>
+                    <label>年龄：${userBean.getUserAge()}
+                    <%--<label>年龄：</label><span class="detail-text">${userBean.getUserAge()}</span>--%>
                 </div>
             </div>
             <div class="row detail-row">
                 <div class="span8">
-                    <label>手机号：</label><span class="detail-text">${userBean.getUserPhone()}</span>
+                    <label>手机号：${userBean.getUserPhone()}
+                    <%--<label>手机号：</label><span class="detail-text">${userBean.getUserPhone()}</span>--%>
                 </div>
                 <div class="span8">
-                    <label>地址：</label><span class="detail-text">${userBean.getUserAdd()}</span>
+                    <label>地址：${userBean.getUserAdd()}
+                    <%--<label>地址：</label><span class="detail-text">${userBean.getUserAdd()}</span>--%>
                 </div>
                 <div class="span8">
-                    <label>岗位：</label>
-                    <span class="detail-text" id="detail-text">
+                    <label>岗位：<span id="a">ddd</span></label>
                         <script type="text/javascript">
                             if (${userBean.getStatus()}==0){
-                                document.getElementById("detail-text").innerHTML = "开发测试岗";
+                                document.getElementById("a").innerHTML = "开发测试岗";
                             }else if (${userBean.getStatus()}==1) {
-                                document.getElementById("detail-text").innerHTML = "管理员";
+                                document.getElementById("a").innerHTML = "普通用户";
                             } else if (${userBean.getStatus()}==2) {
-                                document.getElementById("detail-text").innerHTML = "普通用户";
+                                document.getElementById("a").innerHTML = "管理员";
                             }
                         </script>
-                    </span>
                 </div>
             </div>
             <div class="row detail-row">
                 <div class="span8">
-                    <label>备注：</label><span class="detail-text">${userBean.getMemo()}</span>
+                    <label>备注：${userBean.getMemo()}
+                    <%--<label>备注：</label><span class="detail-text">${userBean.getMemo()}</span>--%>
                 </div>
                 <div class="span8">
-                    <label>入职时间：</label><span class="detail-text">${userBean.getCtime()}</span>
+                    <label>入职时间：${userBean.getCtime()}
+                    <%--<label>入职时间：</label><span class="detail-text">${userBean.getCtime()}</span>--%>
                 </div>
             </div>
         </div>

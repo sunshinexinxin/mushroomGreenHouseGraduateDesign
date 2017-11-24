@@ -39,6 +39,10 @@
         <action name="userInfoPage">
             <result>/WEB-INF/jsp/sence/userInfo.jsp</result>
         </action>
+        <!--系统后台管理-系统用户配置-->
+        <action name="usersManage">
+            <result>/WEB-INF/jsp/sence/addUsers.jsp</result>
+        </action>
 
     </package>
 

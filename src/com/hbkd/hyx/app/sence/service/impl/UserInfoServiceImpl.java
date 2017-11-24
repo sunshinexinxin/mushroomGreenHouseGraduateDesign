@@ -8,15 +8,20 @@ import com.hbkd.hyx.app.sence.service.UserInfoService;
 import java.util.List;
 
 
+/**
+ * @author anke
+ */
 public class UserInfoServiceImpl implements UserInfoService {
 
     private UserInfoDao userInfoDao;
 
 
+    @Override
     public User getUserInfoById(String id) {
         return userInfoDao.getUserInfoById(id);
     }
 
+    @Override
     public List<Monitor> getUserInfoList(String id) {
         return userInfoDao.getUserInfoList(id);
     }

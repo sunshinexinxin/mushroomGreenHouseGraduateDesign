@@ -2,14 +2,23 @@ package com.hbkd.hyx.app.login.service;
 
 import com.hbkd.hyx.app.login.bean.User;
 
-import javax.xml.ws.ServiceMode;
-
 //import java.util.List;
 
-@ServiceMode
+/**
+ * @author anke
+ */
 public interface UserService {
 
-	User getUserById(String id);
+	/**用户登录，获取用户信息
+	 * @param id
+	 * @return
+	 */
+	User getUserByName(String id);
 
-//	public List<User> getUserList(String id);
+	/**根据用户名获取用户数量
+	 * @param name
+	 * @return
+	 */
+	Integer getUserCountByName(String name);
+
 }

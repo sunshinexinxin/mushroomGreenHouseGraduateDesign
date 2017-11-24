@@ -1,21 +1,21 @@
 package com.hbkd.hyx.app.sence.dao.impl;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.log4j.Logger;
-import org.mybatis.spring.support.SqlSessionDaoSupport;
-
 import com.hbkd.hyx.app.sence.bean.CreditList;
 import com.hbkd.hyx.app.sence.dao.CreditListDao;
 import com.opensymphony.xwork2.ActionContext;
+import org.apache.log4j.Logger;
+import org.mybatis.spring.support.SqlSessionDaoSupport;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class CreditListDaoImpl extends SqlSessionDaoSupport implements CreditListDao {
 	
 	private Logger logger = Logger.getLogger(CreditListDaoImpl.class);
 
 	/*点击页面直接显示信贷员*/
+	@Override
 	public List<CreditList> getCreditList(int pageNo) {
 		List<CreditList> creditList = null;
 		CreditList countCredit = null;
@@ -28,6 +28,7 @@ public class CreditListDaoImpl extends SqlSessionDaoSupport implements CreditLis
 	}
 
 	/*搜索信贷员*/
+	@Override
 	public List<CreditList> getCreditSearch(String searchName) {
 		List<CreditList> creditList = null;
 		CreditList countCredit = null;

@@ -13,15 +13,11 @@
     <link rel="shortcut icon" href="/mushroomGreenHouseGraduateDesign/static/image/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/Styles/admin-all.css"/>
     <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/Styles/base.css"/>
-    <link rel="stylesheet" type="text/css"
-          href="/mushroomGreenHouseGraduateDesign/static/main/Styles/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css"
-          href="/mushroomGreenHouseGraduateDesign/static/main/Styles/ui-lightness/jquery-ui-1.8.22.custom.css"/>
+    <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/Styles/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/Styles/ui-lightness/jquery-ui-1.8.22.custom.css"/>
 
     <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/jquery-1.7.2.js"></script>
-
-    <script type="text/javascript"
-            src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/jquery-ui-1.8.22.custom.min.js"></script>
+    <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/jquery-ui-1.8.22.custom.min.js"></script>
     <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/index.js"></script>
     <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/js/sence/mainManager.js"></script>
 
@@ -275,7 +271,7 @@
                 <ul class="kid">
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="/mushroomGreenHouseGraduateDesign/static/main/Template/order.html">查看管理员信息</a>
+                                              href="/mushroomGreenHouseGraduateDesign/static/main/Template/usersManage.action">系统用户配置</a>
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe"
