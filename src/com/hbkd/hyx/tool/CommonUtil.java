@@ -46,7 +46,7 @@ public class CommonUtil {
      */
     public static String getLocalSysTime2() {
         Date dates = new Date();
-        DateFormat format = new SimpleDateFormat("yyyy-MM-dd-HH:mm:ss");
+        DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String time = format.format(dates);
         return time;
     }

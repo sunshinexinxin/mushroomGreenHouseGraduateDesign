@@ -57,7 +57,7 @@ public class BackStageManagementAction extends BaseAction {
         }
         resuData.setData(usersList);
         rsJsonData = JSONObject.fromObject(resuData);
-        System.out.println(rsJsonData);
+        logger.info(rsJsonData);
 
         return SUCCESS;
     }
@@ -68,7 +68,7 @@ public class BackStageManagementAction extends BaseAction {
      * @return
      */
     public String addUsers() {
-        Map<String, String> params = new HashMap<>(16);
+        Map params = new HashMap<>(16);
         params.put("userName", userName);
         params.put("userPsd", Md5Utils.MD5Encode(userPsd));
         params.put("userAge", userAge);
@@ -76,12 +76,13 @@ public class BackStageManagementAction extends BaseAction {
         params.put("userAdd", userAdd);
         params.put("status", status);
         params.put("memo", memo);
-        params.put("ctime", CommonUtil.getLocalSysTime1());
+        params.put("ctime", CommonUtil.getLocalSysTime2());
         logger.info("系统后台管理-添加系统用户" + params);
         //判断是否存在该用户，如果存在，不添加
         Integer userCountByName = userService.getUserCountByName(userName);
         ResuData resuData = new ResuData();
-        if(StrKit.notBlank(userCountByName.toString())&&userCountByName==0){
+        if (StrKit.notBlank(userCountByName.toString()) && userCountByName == 0) {
+            logger.info("添加用户：" + params);
             //添加用户
             Integer rst = backStageManagementService.addUsers(params);
             User userById;
@@ -89,7 +90,7 @@ public class BackStageManagementAction extends BaseAction {
                 //根据刚刚插入的用户，查询出来刚刚插入的数据，因为id等是自动生成的，所以需要重新查询一次
                 try {
                     userById = userService.getUserByName(userName);
-                    System.out.println(userById);
+                    logger.info(userById);
                     if (userById == null) {
                         resuData.setStatus("400");
                         resuData.setMessage("添加数据成功，获取失败");
@@ -103,16 +104,20 @@ public class BackStageManagementAction extends BaseAction {
                 resuData.setStatus("400");
                 resuData.setMessage("添加数据失败");
             }
-        }else{
+        } else {
             resuData.setStatus("400");
             resuData.setMessage("用户名已存在");
         }
 
         rsJsonData = JSONObject.fromObject(resuData);
-        System.out.println(rsJsonData);
+        logger.info(rsJsonData);
         return SUCCESS;
     }
 
+    /**删除用户
+     *
+     * @return
+     */
     public String deleteUsers() {
         Integer integer = backStageManagementService.deleteUsers(userID);
         ResuData resuData = new ResuData();
@@ -121,7 +126,7 @@ public class BackStageManagementAction extends BaseAction {
             resuData.setMessage("失败");
         }
         rsJsonData = JSONObject.fromObject(resuData);
-        System.out.println(rsJsonData);
+        logger.info(rsJsonData);
         return SUCCESS;
     }
 
@@ -132,23 +137,6 @@ public class BackStageManagementAction extends BaseAction {
     public void setLogger(Logger logger) {
         this.logger = logger;
     }
-
-    public Map<String, Object> getRsJsonData() {
-        return rsJsonData;
-    }
-
-    public void setRsJsonData(Map<String, Object> rsJsonData) {
-        this.rsJsonData = rsJsonData;
-    }
-
-    public BackStageManagementService getBackStageManagementService() {
-        return backStageManagementService;
-    }
-
-    public void setBackStageManagementService(BackStageManagementService backStageManagementService) {
-        this.backStageManagementService = backStageManagementService;
-    }
-
 
     public String getStatus() {
         return status;
@@ -212,6 +200,22 @@ public class BackStageManagementAction extends BaseAction {
 
     public void setMemo(String memo) {
         this.memo = memo;
+    }
+
+    public Map<String, Object> getRsJsonData() {
+        return rsJsonData;
+    }
+
+    public void setRsJsonData(Map<String, Object> rsJsonData) {
+        this.rsJsonData = rsJsonData;
+    }
+
+    public BackStageManagementService getBackStageManagementService() {
+        return backStageManagementService;
+    }
+
+    public void setBackStageManagementService(BackStageManagementService backStageManagementService) {
+        this.backStageManagementService = backStageManagementService;
     }
 
     public UserService getUserService() {

@@ -32,7 +32,7 @@
         from tb_mrgh_users
         where 1=1
             and user_id != #{userId,jdbcType=NVARCHAR}
-            and status &lt;= #{status,jdbcType=NVARCHAR}
+            and status &lt;= #{status,jdbcType=INTEGER}
     </select>
 
     <!--添加系统用户 -->

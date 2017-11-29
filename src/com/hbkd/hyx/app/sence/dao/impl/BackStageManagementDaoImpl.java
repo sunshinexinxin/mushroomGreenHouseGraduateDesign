@@ -25,15 +25,14 @@ public class BackStageManagementDaoImpl extends SqlSessionDaoSupport implements 
      * @return
      */
     @Override
-    public List<User> getUsersList(String userId, String status) {
+    public List<User> getUsersList(String userId,String status) {
 
         logger.info("SQL_ID:BackStageManagement.getUsersByUserID");
-        Map<String, String> params = new HashMap<>(16);
+        Map params = new HashMap<>(16);
         params.put("userId", userId);
-        params.put("status", status);
+        params.put("status", Integer.parseInt(status));
         // sql语句，传入一个参数，后台查询后返回；
-        List<User> usersList;
-        usersList = getSqlSession().selectList("BackStageManagement.getUsersByUserID", userId);
+        List<User> usersList = getSqlSession().selectList("BackStageManagement.getUsersByUserID", params);
         return usersList;
     }
 

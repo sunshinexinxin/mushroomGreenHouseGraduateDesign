@@ -9,10 +9,12 @@
 <head>
     <title></title>
 
-    <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/Styles/formui.css" />
-    <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/Styles/admin-all.css" />
+    <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/min/Styles/bootstrap.min.css"/>
+
+    <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/Styles/formui.css"/>
+    <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/Styles/admin-all.css"/>
     <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/Styles/base.css"/>
-    <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/Styles/ui-lightness/jquery-ui-1.8.22.custom.css" />
+    <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/Styles/ui-lightness/jquery-ui-1.8.22.custom.css"/>
 
     <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/jquery-1.7.2.js"></script>
     <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/jquery-ui-1.8.22.custom.min.js"></script>
@@ -27,7 +29,7 @@
 </div>
 
 <div>
-        <table class="tbform list" id="top_table">
+    <table class="tbform list" id="top_table">
         <thead>
         <tr class="tr">
             <th colspan="100">当前系统用户 <i class="tip-up"></i></th>
@@ -67,30 +69,34 @@
             <td>家庭地址</td>
         </tr>
         <tr>
-            <td><input type="text" class="ipt" id="ipt1"/></td>
-            <td><input type="password" class="ipt" id="ipt2"/></td>
-            <td><input type="text" class="ipt" id="ipt3"/></td>
-            <td><input type="text" class="ipt" id="ipt4"/></td>
+            <td><input type="text" class="ipt" id="ipt1" value="输入姓名"/></td>
+            <td><input type="password" class="ipt" id="ipt2" value="输入密码"/></td>
+            <td><input type="text" class="ipt" id="ipt3" value="输入年龄，1-99岁"/></td>
+            <td><input type="text" class="ipt" id="ipt4" value=""/></td>
             <td><input type="text" class="ipt" id="ipt5"/></td>
         </tr>
         <br/>
         <tr>
             <td>用户岗位</td>
             <td>备注</td>
-            <%--<td>操作</td>--%>
         </tr>
         <tr>
-            <td><input type="text" class="ipt" id="ipt6"/></td>
+            <%--<td><input type="text" class="ipt" id="ipt6"/></td>--%>
+        <td>
+            <select id="ipt6">
+                <option value="1">普通员工</option>
+                <option value="2">管理人员</option>
+            </select>
+
+        </td>
             <td><input type="text" class="ipt" id="ipt7"/></td>
             <td><a class="btn btn-mini btn-danger" id="ipt8">取消</a></td>
-            <td><a class="btn btn-mini btn-primary" id="ipt9">提交</a></td>
+            <td><input type="button"  value="提交" id="ipt9" class="btn btn-mini btn-primary" disabled="disabled"/></td>
         </tr>
-        <%--<tr>--%>
-            <%--<td colspan="100" align="right"><a class="btn btn-mini btn-primary" id="comm">提交</a></td>--%>
-        <%--</tr>--%>
         </tbody>
     </table>
 </div>
+
 
 <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/js/sence/addUsers.js"></script>
 </body>

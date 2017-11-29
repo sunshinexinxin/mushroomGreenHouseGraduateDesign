@@ -115,7 +115,7 @@ public class LoginAction extends BaseAction {
         }
         rs.setData(resuList.toString());
         rsJsonData = JSONObject.fromObject(rs);
-        System.out.println("rsJsonData\t" + rsJsonData);
+        logger.info("rsJsonData\t" + rsJsonData);
 
         return SUCCESS;
     }
