@@ -1,10 +1,22 @@
 /**
  * Created by anke on 2017/10/11.
  */
-// window.onload = function () {
+
+
 $(document).ready(function () {
+    var stat = $("#status").val();
+    if (stat == 2 | stat == 0) {
+        $("#left5").show();
+        $("#left3").show();
+    } else {
+        $("#left5").hide();
+        $("#left3").hide();
+    }
+
     $("#homePage>p").trigger("click");
+
 });
+
 
 // var dd = (function () {
 // document.getElementById("homePage").onclick = function () {
