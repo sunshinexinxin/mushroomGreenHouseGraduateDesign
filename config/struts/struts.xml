@@ -12,29 +12,40 @@
     <constant name="struts.custom.i18n.resources" value="globalMessages"/>
     <constant name="struts.action.extension" value="action,,"/>
 
+
     <package name="login" extends="struts-default" namespace="">
         <!-- 用户登录 -->
-        <action name="show" class="loginAction" method="login">
-            <result name="error">/WEB-INF/jsp/login/login.html</result>
-            <result name="staff">/WEB-INF/jsp/sence/mainStaff.jsp</result>
-            <result name="manage">/WEB-INF/jsp/sence/mainManager.jsp</result>
+        <action name="login" class="com.hbkd.hyx.app.login.action.LoginAction" method="login">
+            <result name="error">/WEB-INF/jsp/login/login.jsp</result>
+            <result name="success">/WEB-INF/jsp/sence/mainManager.jsp</result>
         </action>
-        <!-- 个人中心 -->
-        <action name="userInfo" class="userInfoAction" method="userInfo">
-            <result name="success">/WEB-INF/jsp/sence/userInfo.jsp</result>
-            <result name="error">/WEB-INF/jsp/sence/err404/404.htm</result>
-        </action>
-        <!-- 用户退出 -->
-        <action name="logout" class="loginAction" method="logout">
-            <result name="success">/WEB-INF/jsp/login/login.html</result>
-        </action>
+    </package>
 
-        <!-- 首页,展示地图 -->
-        <action name="mushRoomMap" class="loginAction" method="mushRoomMap">
-            <result name="success">/WEB-INF/jsp/sence/mushRoomMap.jsp</result>
+    <!--#########################页面跳转#########################-->
+    <package name="pageJump" extends="struts-default" namespace="">
+        <!-- 用户退出 返回登录页面-->
+        <action name="logout">
+            <result>/WEB-INF/jsp/login/login.jsp</result>
+        </action>
+        <!--首页,展示地图 请求页面-->
+        <action name="mushRoomMapPage">
+            <result>/WEB-INF/jsp/sence/mushRoomMap.jsp</result>
+        </action>
+        <!-- 饼图统计 请求页面-->
+        <action name="echarts_bingtu">
+            <result>/WEB-INF/jsp/sence/charts/echarts_bingtu.jsp</result>
+        </action>
+        <!-- 个人中心 请求页面-->
+        <action name="userInfoPage">
+            <result>/WEB-INF/jsp/sence/userInfo.jsp</result>
+        </action>
+        <!--系统后台管理-系统用户配置-->
+        <action name="usersManage">
+            <result>/WEB-INF/jsp/sence/addUsers.jsp</result>
         </action>
 
     </package>
+
 
     <include file="struts/struts_sence.xml"/>
     <include file="struts/struts_manager.xml"/>

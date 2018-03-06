@@ -4,7 +4,6 @@
 <mapper namespace="UserInfoMapper">
     <!--个人中心-->
     <resultMap id="userInfoMapList" type="Monitor">
-        <result column="mushroom_idno" property="idno"/>
         <result column="mushroom_pointid" property="mushroomPointid"/>
         <result column="mushroom_name" property="mushroomName"/>
         <result column="user_id" property="userId"/>
@@ -20,7 +19,6 @@
     <!--[个人中心]大棚关联用户岗位-->
     <select id="getUserInfoListByUserID" resultMap="userInfoMapList">
         select
-            idno as mushroom_idno,
             mushroom_pointid as mushroomPointid,
             mushroom_name as mushroomName,
             user_id as userId,
@@ -39,6 +37,5 @@
         where 1=1
            and user_id = #{userId,jdbcType=NVARCHAR}
 	</select>
-
 
 </mapper>

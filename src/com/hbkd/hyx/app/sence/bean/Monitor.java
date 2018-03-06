@@ -3,6 +3,7 @@ package com.hbkd.hyx.app.sence.bean;
 /**
  * Created by anke on 2017/4/22.
  */
+//大棚 bean
 public class Monitor {
 
     private String idno;

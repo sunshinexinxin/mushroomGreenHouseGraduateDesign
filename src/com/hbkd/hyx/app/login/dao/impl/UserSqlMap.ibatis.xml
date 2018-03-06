@@ -5,7 +5,6 @@
 <mapper namespace="UserMapper">
 	<!--ID对应*daoImpl类方法的参数，type对应bean-->
 	<resultMap id="userMap" type="User">
-		<result property="idno" column="idno" />
 		<result property="userId" column="user_id" />
 		<result property="userName" column="user_name" />
 		<result property="userAge" column="user_age" />
@@ -16,6 +15,7 @@
 		<result property="delFlag" column="del_flag" />
 		<result property="memo" column="memo" />
 		<result property="ctime" column="ctime" />
+		<result property="coun" column="coun" />
 	</resultMap>
 	<!--
 		select 语句，传参一个，返回User对象 。注：select id as id,name as name,pwd as pwd
@@ -24,8 +24,13 @@
 	<!-- 下面的resultMap要和 namespace 中的id对应上-->
 
 	<!-- 登录查询 -->
-	<select id="getUserById" parameterType="String" resultMap="userMap">
+	<select id="getUserByName" parameterType="String" resultMap="userMap">
 		select * from TB_MRGH_USERS WHERE user_name = #{name,jdbcType=NVARCHAR}
+	</select>
+
+	<!--系统用户配置-->
+	<select id="getUserCountByName" parameterType="String" resultType="java.lang.Integer">
+		select count(0) as coun from TB_MRGH_USERS WHERE user_name = #{name,jdbcType=NVARCHAR}
 	</select>
 
 	<!--个人中心-->

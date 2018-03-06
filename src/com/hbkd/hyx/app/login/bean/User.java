@@ -4,8 +4,6 @@ import com.hbkd.hyx.app.sence.bean.Monitor;
 
 public class User {
 
-    //编号
-    private String idno;
     //用户id
     private String userId;
     //用户姓名
@@ -18,7 +16,7 @@ public class User {
     private String userPhone;
     //用户地址
     private String userAdd;
-    //用户身份标识.0:开发测试;1:管理员;2:普通用户
+    //用户身份标识.0:开发测试;1:普通用户;2:管理员
     private String status;
     //删除标识.初始为0;删除为1.
     private String delFlag;
@@ -29,14 +27,9 @@ public class User {
 
     //大棚监控点
     private Monitor monitor;
+    //统计
+    private Monitor coun;
 
-    public String getIdno() {
-        return idno;
-    }
-
-    public void setIdno(String idno) {
-        this.idno = idno;
-    }
 
     public String getUserId() {
         return userId;
@@ -126,11 +119,18 @@ public class User {
         this.monitor = monitor;
     }
 
+    public Monitor getCoun() {
+        return coun;
+    }
+
+    public void setCoun(Monitor coun) {
+        this.coun = coun;
+    }
+
     @Override
     public String toString() {
         return "User{" +
-                "idno='" + idno + '\'' +
-                ", userId='" + userId + '\'' +
+                "userId='" + userId + '\'' +
                 ", userName='" + userName + '\'' +
                 ", userAge='" + userAge + '\'' +
                 ", userPsd='" + userPsd + '\'' +
@@ -141,6 +141,7 @@ public class User {
                 ", memo='" + memo + '\'' +
                 ", ctime='" + ctime + '\'' +
                 ", monitor=" + monitor +
+                ", coun=" + coun +
                 '}';
     }
 }

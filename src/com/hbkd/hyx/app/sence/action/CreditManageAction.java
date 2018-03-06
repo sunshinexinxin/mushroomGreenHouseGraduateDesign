@@ -1,12 +1,11 @@
 package com.hbkd.hyx.app.sence.action;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import org.apache.log4j.Logger;
-
 import com.hbkd.hyx.app.sence.service.CreditManageService;
 import com.hbkd.hyx.core.mvc.BaseAction;
+import org.apache.log4j.Logger;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class CreditManageAction extends BaseAction {
@@ -22,7 +21,7 @@ public class CreditManageAction extends BaseAction {
 	private String userId;
 	private String userName;
 	private String userGender;
-	private Map<String, String> map = new HashMap<String, String>();
+	private Map<String, String> map = new HashMap<>();
 	private Object retStringObject;
 
 	public String addCredit() {

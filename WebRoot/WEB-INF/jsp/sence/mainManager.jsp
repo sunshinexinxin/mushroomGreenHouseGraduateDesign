@@ -13,38 +13,16 @@
     <link rel="shortcut icon" href="/mushroomGreenHouseGraduateDesign/static/image/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/Styles/admin-all.css"/>
     <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/Styles/base.css"/>
-    <link rel="stylesheet" type="text/css"
-          href="/mushroomGreenHouseGraduateDesign/static/main/Styles/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css"
-          href="/mushroomGreenHouseGraduateDesign/static/main/Styles/ui-lightness/jquery-ui-1.8.22.custom.css"/>
+    <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/Styles/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/mushroomGreenHouseGraduateDesign/static/main/Styles/ui-lightness/jquery-ui-1.8.22.custom.css"/>
 
     <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/jquery-1.7.2.js"></script>
-    <script type="text/javascript"
-            src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/jquery-ui-1.8.22.custom.min.js"></script>
+    <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/jquery-ui-1.8.22.custom.min.js"></script>
     <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/main/Scripts/index.js"></script>
-
-    <script type="text/javascript">
-        function fireEvent(element, event) {
-            if (document.createEventObject) {
-                // dispatch for IE
-                var evt = document.createEventObject();
-                return element.fireEvent('on' + event, evt)
-            }
-            else {
-                // dispatch for firefox + others
-                var evt = document.createEvent("HTMLEvents");
-                evt.initEvent(event, true, true); // event type,bubbling,cancelable
-                return !element.dispatchEvent(evt);
-            }
-        }
-
-        function _click() {
-            fireEvent(document.getElementById('123'), 'click');
-        }
-    </script>
+    <script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/js/sence/mainManager.js"></script>
 
 </head>
-<body onload="_click();">
+<body>
 
 <div class="warp">
     <!--头部开始-->
@@ -52,21 +30,15 @@
         <div class="top-menu">
             <ul class="top-menu-nav">
                 <li>
-                    <a target="Conframe" href="/mushroomGreenHouseGraduateDesign/user/mushRoomMap.action" id="123"
-                       name="123">首页</a>
+                    <a target="Conframe" href="/mushroomGreenHouseGraduateDesign/user/mushRoomMapPage.action"
+                       id="homePage" name="homePage">
+                        <p>首页</p>
+                    </a>
                 </li>
                 <li>
                     <a href="#">信息发布<i class="tip-up"></i>
                     </a>
                     <ul class="kidc">
-                        <li>
-                            <a target="Conframe"
-                               href="/mushroomGreenHouseGraduateDesign/static/main/Template/find-form.html">预留菜单</a>
-                        </li>
-                        <li>
-                            <a target="Conframe"
-                               href="/mushroomGreenHouseGraduateDesign/static/main/Template/find-alert.html">预留菜单</a>
-                        </li>
                         <li>
                             <a target="Conframe"
                                href="/mushroomGreenHouseGraduateDesign/static/main/Template/find-order.html">预留菜单</a>
@@ -159,53 +131,34 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#">预留菜单<i class="tip-up"></i>
-                    </a>
-                    <ul class="kidc">
-                        <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/mushroomGreenHouseGraduateDesign/static/main/Template/order.html">预留菜单</a>
-                        </li>
-                        <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/mushroomGreenHouseGraduateDesign/static/main/Template/formstyle.html">预留菜单</a>
-                        </li>
-                        <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/mushroomGreenHouseGraduateDesign/static/main/Template/formstyle.html">预留菜单</a>
-                        </li>
-                        <li>
-                            <b class="tip"></b><a target="Conframe"
-                                                  href="/mushroomGreenHouseGraduateDesign/static/main/Template/formstyle.html">预留菜单</a>
-                        </li>
-                    </ul>
-                </li>
             </ul>
         </div>
         <div class="top-nav">
             欢迎您，${userName}！&nbsp;&nbsp;
-            <a href="/mushroomGreenHouseGraduateDesign/user/userInfo.action" target="Conframe">个人中心</a> |
+            <a href="/mushroomGreenHouseGraduateDesign/user/userInfoPage.action" target="Conframe">个人中心</a> |
             <a href="/mushroomGreenHouseGraduateDesign/user/logout.action">安全退出</a>
         </div>
     </div>
     <!--头部结束-->
     <!--左边菜单开始-->
+
     <div class="left_c left">
         <h1>
             系统操作菜单
         </h1>
         <div class="acc">
             <div>
-                <a class="one">数据报表统计</a>
+                <a class="one" id="left1"><span id="span1">数据报表统计</span></a>
                 <ul class="kid">
                     <li>
                         <b class="tip"></b>
-                        <a target="Conframe" href="/mushroomGreenHouseGraduateDesign/static/main/Template/echarts_bingtu.jsp">饼图统计</a>
+                        <a target="Conframe"
+                           href="/mushroomGreenHouseGraduateDesign/static/main/Template/echarts_bingtu.action">饼图统计</a>
                     </li>
                     <li>
                         <b class="tip"></b>
-                        <a target="Conframe" href="/mushroomGreenHouseGraduateDesign/static/main/Template/echarts_duiji.jsp">统计分析</a>
+                        <a target="Conframe"
+                           href="/mushroomGreenHouseGraduateDesign/static/main/Template/echarts_duiji.jsp">统计分析</a>
                     </li>
                     <li>
                         <b class="tip"></b>
@@ -214,7 +167,7 @@
                 </ul>
             </div>
             <div>
-                <a class="one" target="Conframe" href="/mushroomGreenHouseGraduateDesign/user/creditList.action?page=1">实时数据查询</a>
+                <a class="one" id="left2">实时数据查询</a>
                 <ul class="kid">
                     <li>
                         <b class="tip"></b><a target="Conframe"
@@ -235,7 +188,7 @@
                 </ul>
             </div>
             <div>
-                <a class="one">预警规则管理</a>
+                <a class="one" id="left3">预警规则管理</a>
                 <ul class="kid">
                     <li>
                         <b class="tip"></b><a target="Conframe"
@@ -264,7 +217,7 @@
                 </ul>
             </div>
             <div>
-                <a class="one">远程设备管理</a>
+                <a class="one" id="left4">远程设备管理</a>
                 <ul class="kid">
                     <li>
                         <b class="tip"></b><a target="Conframe"
@@ -285,19 +238,18 @@
                 </ul>
             </div>
             <div>
-                <a class="one">系统后台管理</a>
+                <input type="hidden" id="status" value="${userBean.getStatus()}">
+            </div>
+            <div>
+                <a class="one" id="left5">系统后台管理</a>
                 <ul class="kid">
                     <li>
                         <b class="tip"></b><a target="Conframe"
-                                              href="/mushroomGreenHouseGraduateDesign/static/main/Template/order.html">查看管理员信息</a>
+                                              href="/mushroomGreenHouseGraduateDesign/static/main/Template/usersManage.action">系统用户配置</a>
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe"
                                               href="/mushroomGreenHouseGraduateDesign/static/main/Template/formstyle.html">修改个人信息</a>
-                    </li>
-                    <li>
-                        <b class="tip"></b><a target="Conframe"
-                                              href="/mushroomGreenHouseGraduateDesign/static/main/Template/formstyle.html">删除个人信息</a>
                     </li>
                     <li>
                         <b class="tip"></b><a target="Conframe"
@@ -320,8 +272,9 @@
 
     </div>
     <div class="Conframe">
-        <iframe name="Conframe" id="Conframe"></iframe>
+        <iframe name="Conframe" id="Conframe" src=""></iframe>
     </div>
+
     <!--右边框架结束-->
     <!--底部开始-->
     <div class="bottom_c">
@@ -329,6 +282,8 @@
     </div>
     <!--底部结束-->
 </div>
+
+<script type="text/javascript" src="/mushroomGreenHouseGraduateDesign/static/js/sence/mainManager.js"></script>
 
 </body>
 </html>

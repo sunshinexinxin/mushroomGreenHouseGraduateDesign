@@ -1,40 +1,77 @@
-<?xml version="1.0" encoding="UTF-8" ?>  
-  
-<!DOCTYPE struts PUBLIC  
-    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"  
-    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
 
-	<!--<constant name="struts.objectFactory" value="spring" />-->
-	<!--<constant name="struts.i18n.encoding" value="UTF-8" />-->
-	<!--<constant name="struts.i18n.reload" value="false" />-->
-	<!--<constant name="struts.configuration.xml.reload" value="false" />-->
-	<!--<constant name="struts.custom.i18n.resources" value="globalMessages" />-->
-	<!--<constant name="struts.action.extension" value="action,," />-->
-
-	<package name="creditList" extends="struts-default" namespace="">
-		<!-- 管理员入口-本行信贷员 -->
-		<action name="creditList" class="creditListAction" method="creditList">
-			<result name="success">/WEB-INF/jsp/sence/creditList.jsp</result>
-		</action>
-		<!-- 查询信贷员 -->
-		<action name="searchCredit" class="creditListAction" method="searchCredit">
-			<result name="success">/WEB-INF/jsp/sence/creditList.jsp</result>
-		</action>
-		<!-- 导出信贷员列表 -->
-		<action name="creditListExport" class="creditListAction" method="creditListExport">
-			<result name="success">/WEB-INF/jsp/sence/bufferPage/CreditExport.jsp</result>
-		</action>
-	</package>
+    <package name="creditList" extends="struts-default" namespace="">
+        <!-- 管理员入口-本行信贷员 -->
+        <action name="creditList" class="creditListAction" method="creditList">
+            <result name="success">/WEB-INF/jsp/sence/creditList.jsp</result>
+        </action>
+        <!-- 查询信贷员 -->
+        <action name="searchCredit" class="creditListAction" method="searchCredit">
+            <result name="success">/WEB-INF/jsp/sence/creditList.jsp</result>
+        </action>
+        <!-- 导出信贷员列表 -->
+        <action name="creditListExport" class="creditListAction" method="creditListExport">
+            <result name="success">/WEB-INF/jsp/sence/bufferPage/CreditExport.jsp</result>
+        </action>
+    </package>
 
 
-	<package name="echarts" extends="struts-default" namespace="">
+    <package name="echarts" extends="struts-default" namespace="">
 
-		<!-- 温度湿度图表展示 -->
-		<action name="echarts_temp_wet" class="chartsCollectionAction" method="tempWet">
-			<result name="success">/WEB-INF/jsp/sence/charts/echarts_temp_wet.jsp</result>
-			<result name="error">/WEB-INF/jsp/sence/err404/404.htm</result>
-		</action>
-	</package>
+        <!-- 温度湿度图表展示 -->
+        <action name="echarts_temp_wet" class="com.hbkd.hyx.app.sence.action.ChartsCollectionAction" method="tempWet">
+            <result name="success">/WEB-INF/jsp/sence/charts/echarts_temp_wet.jsp</result>
+            <result name="error">/WEB-INF/jsp/sence/err404/404.htm</result>
+        </action>
+
+
+    </package>
+
+
+    <package name="textJson" namespace="" extends="json-default">
+        <!-- 首页,展示地图 请求数据-->
+        <action name="mushRoomMapData" class="com.hbkd.hyx.app.login.action.LoginAction" method="mushRoomMap">
+            <result type="json">
+                <param name="root">rsJsonData</param>
+            </result>
+        </action>
+
+        <!-- 个人中心 请求数据-->
+        <action name="userInfo" class="com.hbkd.hyx.app.sence.action.UserInfoAction" method="userInfo">
+            <result type="json">
+                <param name="root">rsJsonData</param>
+            </result>
+        </action>
+    </package>
+
+
+    <!-- 系统后台管理模块 -->
+    <package name="stageManagement" namespace="" extends="json-default">
+
+        <!--查询系统用户-->
+        <action name="getUsers" class="com.hbkd.hyx.app.sence.action.BackStageManagementAction" method="getUsers">
+            <result type="json">
+                <param name="root">rsJsonData</param>
+            </result>
+        </action>
+        <!--添加系统用户-->
+        <action name="addUsers" class="com.hbkd.hyx.app.sence.action.BackStageManagementAction" method="addUsers">
+            <result type="json">
+                <param name="root">rsJsonData</param>
+            </result>
+        </action>
+
+        <!--添加系统用户-->
+        <action name="deleteUsers" class="com.hbkd.hyx.app.sence.action.BackStageManagementAction" method="deleteUsers">
+            <result type="json">
+                <param name="root">rsJsonData</param>
+            </result>
+        </action>
+    </package>
 </struts>
